@@ -1,0 +1,96 @@
+@import "./styles/config";
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 6.25%;
+}
+
+body {
+   width: 100vw;
+   font-family: "barlow condensed", sans-serif;
+   font-size: calc(max(1.1vw, 12rem));
+   font-weight: 400;
+   color: darken($text-color, 10%);
+   background: $soft-white;
+   overflow-x: hidden;
+   // @include scrollbars(0, black, black);
+}
+
+span {
+   font-weight: 500;
+}
+
+%header-styles {
+   font-family: "Barlow Condensed", sans-serif;
+   font-weight: 400;
+   letter-spacing: 5rem;
+   text-transform: uppercase;
+   color: $header-color;
+   margin: 0 0 1vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   @extend %header-styles;
+}
+
+h1 {
+   font-size: calc(max(7vw, 25rem));
+   letter-spacing: 10rem;
+}
+
+h2 {
+   font-size: calc(max(2.5vw, 18rem));
+}
+
+h3 {
+   font-size: calc(max(2.7vw, 20rem));
+   font-weight: 500;
+}
+
+h4 {
+   font-size: 26rem;
+}
+
+h5 {
+   letter-spacing: 1rem;
+   font-size: calc(max(1.2vw, 12rem));
+   font-weight: 500;
+}
+
+h6 {
+   letter-spacing: 1rem;
+   font-weight: 500;
+}
+
+li {
+   list-style: none;
+}
+
+.App {
+   width: 100vw;
+   height: 100vh;
+}
+
+.page-container {
+   display: flex;
+   width: 400vw;
+}
+
+.page {
+   width: 100vw;
+   height: 100vh;
+}
+
+.no-display {
+   display: none;
+}

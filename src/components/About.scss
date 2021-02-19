@@ -1,0 +1,28 @@
+@import "../styles/config";
+
+.about {
+   position: relative;
+   .main-content {
+      width: 50vw;
+      height: 100vh;
+   }
+
+   .ice-city-container {
+      position: absolute;
+      top: 25vh;
+      right: -2vw;
+      background: linear-gradient(
+            -0.45turn,
+            $sun-orange 20%,
+            $warm-pink 30%,
+            darken($water-blue, 5%),
+            lighten($ice-blue, 10%) 60%
+         )
+         no-repeat;
+      mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
+   }
+
+   .ice-city {
+      transform: rotate(180deg) scaleX(-1);
+   }
+}

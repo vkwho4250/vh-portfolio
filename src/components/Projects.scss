@@ -1,0 +1,27 @@
+@import "../styles/config";
+
+#projects-page {
+   position: relative;
+}
+
+.title-content {
+   padding-top: 5vh;
+   height: 100%;
+   width: 25vw;
+
+   h1 {
+      font-size: 5vw;
+   }
+}
+
+.panel-container {
+   width: 80%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+   grid-gap: 30rem;
+}
+
+// .flex-container {
+//    height: 100%;
+//    display: flex;
+// }
