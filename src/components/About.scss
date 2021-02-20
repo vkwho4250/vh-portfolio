@@ -9,6 +9,7 @@
 
    .ice-city-container {
       position: absolute;
+      width: 50vw;
       top: 25vh;
       right: -2vw;
       background: linear-gradient(
@@ -20,9 +21,5 @@
          )
          no-repeat;
       mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
-   }
-
-   .ice-city {
-      transform: rotate(180deg) scaleX(-1);
    }
 }

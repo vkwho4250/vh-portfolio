@@ -13,7 +13,7 @@ html {
 body {
    width: 100vw;
    font-family: "barlow condensed", sans-serif;
-   font-size: calc(max(1.1vw, 12rem));
+   font-size: calc(max(1.1vw, 10rem));
    font-weight: 400;
    color: darken($text-color, 10%);
    background: $soft-white;
@@ -44,16 +44,16 @@ h6 {
 }
 
 h1 {
-   font-size: calc(max(7vw, 25rem));
+   font-size: calc(max(6.5vw, 23rem));
    letter-spacing: 10rem;
 }
 
 h2 {
-   font-size: calc(max(2.5vw, 18rem));
+   font-size: calc(max(2.3vw, 16rem));
 }
 
 h3 {
-   font-size: calc(max(2.7vw, 20rem));
+   font-size: calc(max(2.7vw, 18rem));
    font-weight: 500;
 }
 
@@ -63,7 +63,7 @@ h4 {
 
 h5 {
    letter-spacing: 1rem;
-   font-size: calc(max(1.2vw, 12rem));
+   font-size: calc(max(1.2vw, 10rem));
    font-weight: 500;
 }
 

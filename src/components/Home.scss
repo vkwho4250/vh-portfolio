@@ -55,8 +55,8 @@
    width: 60vw;
 
    .title {
-      @include flex-container(flex-start, flex-end);
-      padding: 0 2vw 3vh 0;
+      // @include flex-container(flex-start, flex-end);
+      padding: 7vh 2vw 2vh 0;
       height: 55vh;
 
       h1 {

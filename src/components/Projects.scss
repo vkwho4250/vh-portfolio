@@ -2,15 +2,14 @@
 
 #projects-page {
    position: relative;
+   width: 100vw;
 }
 
 .title-content {
-   padding-top: 5vh;
-   height: 100%;
-   width: 25vw;
+   padding: 5vh 2vw;
 
    h1 {
-      font-size: 5vw;
+      font-size: calc(min(18vh, 15vw));
    }
 }
 
@@ -18,10 +17,26 @@
    width: 80%;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
-   grid-gap: 30rem;
 }
 
-// .flex-container {
-//    height: 100%;
-//    display: flex;
-// }
+.projects-container {
+   display: grid;
+   grid-template-columns: 1fr 3fr;
+   height: 100vh;
+
+   .nav-links {
+      padding-top: 20vh;
+
+      li {
+         font-style: italic;
+
+         h6:nth-child(2) {
+            padding-left: 2vw;
+         }
+      }
+   }
+
+   .panel-container {
+      @include flex-container(flex-start, flex-start, column);
+   }
+}

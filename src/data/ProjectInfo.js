@@ -30,4 +30,11 @@ const reactBulletJournal = {
    site: "",
 };
 
-export { yahtzee, rockPaperScissors, vueBulletJournal, reactBulletJournal };
+const ProjectInfo = [
+   yahtzee,
+   rockPaperScissors,
+   vueBulletJournal,
+   reactBulletJournal,
+];
+
+export default ProjectInfo;

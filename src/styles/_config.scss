@@ -7,8 +7,8 @@ $dark-gray: #636368;
 // LIGHT THEME
 $ice-blue: #99d3df;
 $water-blue: #88bbd6;
-// $warm-gray: #cdcdcd;
-// $ice-gray: #e9e9e9;
+$warm-gray: #cdcdcd;
+$ice-gray: #f8f7f7;
 $soft-white: #fcfcfc;
 
 // DARK THEME
@@ -44,11 +44,12 @@ $header-color: $dark-gray;
    height: 100%;
 }
 
-@mixin flex-container($justify, $align) {
+@mixin flex-container($justify, $align, $direction: row) {
    width: 100%;
    display: flex;
    justify-content: $justify;
    align-items: $align;
+   flex-direction: $direction;
 }
 
 %flex-center {

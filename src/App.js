@@ -10,10 +10,17 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
    faHome,
    faExternalLinkSquareAlt,
+   faExternalLinkAlt,
    faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faHome, faExternalLinkSquareAlt, faChevronDown);
+library.add(
+   fab,
+   faHome,
+   faExternalLinkSquareAlt,
+   faChevronDown,
+   faExternalLinkAlt
+);
 
 function App() {
    return (
