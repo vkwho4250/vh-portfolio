@@ -32,13 +32,13 @@ const vueBulletJournal = {
    ],
    reasons: [
       "items were regularly updated -- perfect practice for state management",
-      "contained many reusuable features/components (e.g. each to-do item)",
+      "contained many reusuable features/components",
       "each user required their own storage space",
    ],
    tech: ["Vue", "Vuex", "Node.js", "MongoDB", "REST API"],
    screenshots: ["vue-bj-1", "vue-bj-2", "vue-bj-2"],
    github: "https://github.com/vkwho4250/vue-bullet-journal",
-   site: "https://fathomless-anchorage-81259.herokuapp.com/",
+   site: "https://vue-bullet-journal-vkwho.herokuapp.com/",
 };
 
 const reactBulletJournal = {
@@ -68,7 +68,7 @@ const rockPaperScissors = {
    description: "The game that never gets old",
    reasons: [
       "break out of the tutorial trap and test my HTML, CSS and JS knowledge",
-      "get a sense of a common design-to-code process",
+      "get a sense of this common design-to-code process",
       "very simple game logic - allowed me to focus on styling and learning the jQuery syntax",
    ],
 
@@ -79,7 +79,7 @@ const rockPaperScissors = {
    tech: ["jQuery", "Responsive Design", "PSD Conversion"],
    screenshots: ["rps-1", "rps-2", "rps-3"],
    github: "https://github.com/vkwho4250/psd-conversion-rps",
-   site: "https://reverent-ardinghelli-00c0c6.netlify.app/",
+   site: "https://rock-paper-scissors-vkwho.netlify.app/",
 };
 
 const ProjectInfo = [

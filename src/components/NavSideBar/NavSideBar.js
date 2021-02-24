@@ -1,11 +1,21 @@
 import React, { useState } from "react";
+import Animations from "../animation";
+import { motion } from "framer-motion";
+
 import "./NavSideBar.scss";
 
 function NavSideBar() {
    const navigation = ["home", "about", "projects", "contact"];
 
    return (
-      <div id="nav-side-bar">
+      <motion.div
+         id="nav-side-bar"
+         variants={Animations.movement}
+         initial="initialX"
+         custom={100}
+         animate="endingXY"
+         transition={{ duration: 1, delay: 2.5 }}
+      >
          <a href="/#home-page">
             <div className="orange-dot"></div>
          </a>
@@ -20,7 +30,7 @@ function NavSideBar() {
                );
             })}
          </ul>
-      </div>
+      </motion.div>
    );
 }
 

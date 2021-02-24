@@ -1,3 +1,5 @@
+import { deepOrange } from "@material-ui/core/colors";
+
 const collapse = {
    close: {
       opacity: 0,
@@ -11,6 +13,17 @@ const collapse = {
    },
 };
 
-const Animations = { collapse: collapse };
+const movement = {
+   initialY: (y) => ({ x: 0, y: y, opacity: 0 }),
+   initialX: (x) => ({ x: x, y: 0, opacity: 0 }),
+   endingXY: { x: 0, y: 0, opacity: 1 },
+};
+
+const rotate = {
+   initialRotation: (deg) => ({ rotate: deg, opacity: 0 }),
+   endingRotation: { rotate: 0, opacity: 1 },
+};
+
+const Animations = { collapse, movement, rotate };
 
 export default Animations;

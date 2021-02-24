@@ -3,7 +3,6 @@ import "./ProjectPanel.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Animations from "./animation";
-import { Link } from "react-router-dom";
 
 function ProjectPanel({ project, index, allDetails, setAllDetails }) {
    const [showDetails, setShowDetails] = useState(false);

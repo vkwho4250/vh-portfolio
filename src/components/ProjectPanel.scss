@@ -17,10 +17,8 @@ $test: soft-white;
    display: grid;
    grid-template-columns: 140rem 40rem 1fr;
 
-   h2,
    svg.icon {
       color: $green-blue;
-      fill: $green-blue;
    }
 
    .project-details {

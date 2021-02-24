@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Home from "./components/Home";
+import Contact from "./components/Contact";
 import NavSideBar from "./components/NavSideBar/NavSideBar";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -13,9 +14,17 @@ import {
    faExternalLinkAlt,
    faChevronDown,
    faChevronUp,
+   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faChevronUp, faHome, faChevronDown, faExternalLinkAlt);
+library.add(
+   fab,
+   faChevronUp,
+   faHome,
+   faChevronDown,
+   faExternalLinkAlt,
+   faEnvelope
+);
 
 function App() {
    return (
@@ -25,6 +34,7 @@ function App() {
          <Home />
          <About />
          <Projects />
+         <Contact />
       </div>
    );
 }

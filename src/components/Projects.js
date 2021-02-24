@@ -18,7 +18,9 @@ function Projects() {
    return (
       <div id="projects-page">
          <div className="page-content">
-            <h1>Projects</h1>
+            <div className="header">
+               <h1>Projects</h1>
+            </div>
             <div className="projects-container">
                <div className="nav-links">
                   <div className="project-list">

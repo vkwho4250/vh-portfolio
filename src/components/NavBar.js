@@ -1,18 +1,21 @@
 import React from "react";
+import Animations from "./animation";
+import { motion } from "framer-motion";
 import "./NavBar.scss";
 
 import { ReactComponent as Logo } from "../assets/SVG/logo.svg";
 
 function NavBar() {
    return (
-      <nav>
+      <motion.nav
+         variants={Animations.movement}
+         initial="initialY"
+         custom={-100}
+         animate="endingXY"
+         transition={{ duration: 1, delay: 2.5 }}
+      >
          <Logo className="logo" />
          <ul>
-            <li>
-               <a href="/#home-page">
-                  <h6>Home</h6>
-               </a>
-            </li>
             <li>
                <a href="/#about-page">
                   <h6>About</h6>
@@ -29,7 +32,7 @@ function NavBar() {
                </a>
             </li>
          </ul>
-      </nav>
+      </motion.nav>
    );
 }
 

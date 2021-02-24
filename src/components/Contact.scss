@@ -1,0 +1,104 @@
+@import "../styles/config";
+
+#contact-page {
+   padding-bottom: 20vh;
+
+   .content {
+      div,
+      form {
+         margin: auto;
+      }
+
+      h2,
+      h3,
+      h5 {
+         text-align: center;
+         margin: auto;
+         color: darken($green-blue, 10%);
+      }
+
+      .main-text {
+         padding: 5vh 22vw 1vh;
+         background: darken($green-blue, 10%);
+
+         .subheading {
+            margin: 5vh auto;
+         }
+
+         h2,
+         h3,
+         h5 {
+            color: $soft-white;
+         }
+
+         h2 {
+            letter-spacing: 5rem;
+         }
+
+         h3 {
+            margin-bottom: 1vh;
+         }
+      }
+   }
+
+   .details {
+      padding-top: 2vh;
+      width: 30vw;
+
+      h3 {
+         text-transform: initial;
+         margin: 1vh 0;
+      }
+
+      a {
+         text-decoration: underline;
+
+         &:hover {
+            color: $bright-orange;
+         }
+      }
+   }
+
+   form {
+      padding-top: 2vh;
+      width: 40vw;
+      height: 50vh;
+
+      textarea,
+      input {
+         width: 100%;
+         padding: 1vh;
+         font-family: inherit;
+         font-size: 18rem;
+         font-weight: 400;
+         margin: 10rem 0;
+         letter-spacing: 1rem;
+         outline: none;
+         border: none;
+         border-bottom: 1rem solid rgba($text-color, 0.5);
+         background: none;
+      }
+
+      input {
+         border: none;
+         border-bottom: 1rem solid rgba($text-color, 0.5);
+      }
+
+      button {
+         background: darken($green-blue, 10%);
+         font: inherit;
+         color: $soft-white;
+         width: 70%;
+         height: 40rem;
+         outline: none;
+         border: none;
+         margin: 5vh 15%;
+
+         &:hover {
+            font-weight: 500;
+            color: darken($text-color, 20%);
+            background: $bright-orange;
+         }
+      }
+   }
+}

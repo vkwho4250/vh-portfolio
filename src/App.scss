@@ -53,7 +53,8 @@ h1 {
 }
 
 h2 {
-   font-size: calc(max(2.5vw, 16rem));
+   font-size: calc(max(2vw, 16rem));
+   color: $green-blue;
 
    span {
       text-transform: uppercase;
@@ -61,8 +62,11 @@ h2 {
 }
 
 h3 {
-   font-size: calc(max(0.8vw, 16rem));
-   font-weight: 500;
+   font-size: calc(max(1.2vw, 18rem));
+   text-transform: initial;
+   font-weight: 300;
+   color: darken($text-color, 30%);
+   letter-spacing: 1rem;
 }
 
 h4 {
@@ -71,7 +75,7 @@ h4 {
 
 h5 {
    letter-spacing: 1rem;
-   font-size: calc(max(1.5vw, 16rem));
+   font-size: calc(max(1.3vw, 16rem));
    font-weight: 500;
 }
 
@@ -96,7 +100,7 @@ li {
 
 .page {
    width: 100vw;
-   height: 100vh;
+   min-height: 100vh;
 }
 
 .no-display {

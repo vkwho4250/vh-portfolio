@@ -25,7 +25,7 @@ function ProjectNavLink({ project, index }) {
                project.title
             }`}</h5>
 
-            {/* <motion.div
+            <motion.div
                layout
                variants={Animations.collapse}
                animate={showDetails ? "open" : "close"}
@@ -38,7 +38,7 @@ function ProjectNavLink({ project, index }) {
                      return <li key={index}>{tech}</li>;
                   })}
                </ul>
-            </motion.div> */}
+            </motion.div>
          </a>
       </li>
    );
