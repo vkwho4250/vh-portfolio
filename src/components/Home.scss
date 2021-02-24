@@ -3,38 +3,37 @@
 .home {
    //    border: 1rem solid red;
 
+   position: relative;
+   padding: 10vh 7vw;
+
    span,
    h3,
-   h6,
-   .icon {
+   h6 {
       color: darken($green-blue, 20%);
-   }
-
-   h5 {
-      color: darken($green-blue, 12%);
    }
 }
 
-.water {
+.bg-image {
    position: absolute;
-   bottom: 0;
-   width: 100vw;
-   height: 45vh;
-   transition: opacity 0.7s ease-in-out;
-   background: linear-gradient(
-      transparent,
-      lighten($ice-blue, 10%) 1%,
-      darken($water-blue, 5%)
-   );
+   @include flex-container(center, center);
+   width: calc(max(75vh, 35vw));
+   height: calc(max(75vh, 35vw));
+   border: 1rem solid $green-blue;
+   border-radius: 50%;
+   overflow: hidden;
 }
 
 .ice-city-container {
+   // position: absolute;
+   // bottom: -6vh;
+   // margin: 0 0 0 10vw;
    position: absolute;
-   bottom: -6vh;
-   margin: 0 0 0 4vw;
-   width: 100vw;
-   min-width: 400rem;
-   height: 100vh;
+   left: 5%;
+   height: 80%;
+   width: 100%;
+
+   // min-width: 400rem;
+   // height: 100vh;
 
    background: linear-gradient(
          lighten($ice-blue, 10%) 30%,
@@ -47,31 +46,53 @@
 
    mask: url("../assets/SVG/iceberg.svg") no-repeat;
 }
+.water {
+   position: absolute;
+   top: 45%;
+   // bottom: 0;
+   // width: 100vw;
+   width: 100%;
+   height: 150%;
+   transition: opacity 0.7s ease-in-out;
+   background: linear-gradient(
+      transparent,
+      lighten($ice-blue, 10%) 1%,
+      darken($water-blue, 5%)
+   );
+}
 
 .home-text {
+   // border: 1rem solid red;
+   background: $soft-white;
    position: absolute;
-   top: 0;
-   right: 0;
-   width: 60vw;
+   top: 5vh;
+   left: 40vw;
+   width: calc(max(50vw, 200rem));
+   height: calc(max(85vh, 40vw));
+   padding: 20vh 10rem 0;
+   border-left: 2rem solid lighten($green-blue, 30%);
 
-   .title {
-      // @include flex-container(flex-start, flex-end);
-      padding: 7vh 2vw 2vh 0;
-      height: 55vh;
+   .main-text {
+      @include flex-container(space-between, flex-start);
+      height: 60%;
+
+      > div {
+         width: 100%;
+         height: 100%;
+      }
 
       h1 {
-         padding-left: 5vw;
          font-weight: 500;
          color: $green-blue;
       }
 
-      .subheading {
-         padding-left: 8vw;
+      h2,
+      h3 {
+         text-transform: initial;
       }
 
-      h2 {
-         display: inline-block;
-         padding-right: 7rem;
+      h5 {
+         color: $text-color;
       }
 
       p {
@@ -85,8 +106,71 @@
       }
 
       span {
-         color: darken($green-blue, 5%);
+         color: darken($green-blue, 10%);
       }
+
+      .headers {
+         padding-right: 15rem;
+         text-align: right;
+         border-right: 1rem solid lighten($green-blue, 30%);
+      }
+
+      .subheading {
+         position: relative;
+         padding-left: 15rem;
+         border-left: 1rem solid lighten($green-blue, 30%);
+
+         h2:first-child {
+            margin-top: 38%;
+         }
+      }
+   }
+
+   .link-container {
+      margin-top: 30rem;
+      position: relative;
+      height: 30%;
+   }
+
+   .arrow-down {
+      > div {
+         position: relative;
+         z-index: 5;
+         width: 2vw;
+         height: 100%;
+      }
+   }
+
+   .arrow-down,
+   ul {
+      @include flex-container(flex-start, center);
+      position: absolute;
+      top: 0;
+      flex-direction: column;
+      height: 100%;
+
+      .icon {
+         width: 100%;
+         height: 100%;
+
+         &:nth-child(1) {
+            color: lighten($green-blue, 5%);
+         }
+
+         &:nth-child(2) {
+            color: $green-blue;
+         }
+
+         &:nth-child(3) {
+            color: darken($green-blue, 10%);
+         }
+      }
+   }
+
+   li {
+      height: 100%;
+      @include flex-container(flex-start, center);
+      padding-left: 10%;
    }
 
    .description {
@@ -102,18 +186,6 @@
          width: 80%;
       }
    }
-
-   .nav-links {
-      ul {
-         @include flex-container(flex-start, center);
-         flex-wrap: wrap;
-      }
-
-      li {
-         margin-right: 2vw;
-         cursor: pointer;
-      }
-   }
 }
 
 .scroll-container {
@@ -122,29 +194,4 @@
    bottom: 0;
    height: 30rem;
    width: 100%;
-}
-
-//! probably remove soon
-.floater-nav {
-   position: absolute;
-   bottom: 0;
-   //    border: 1rem solid red;
-   width: 50vw;
-   height: 50vh;
-   padding: 10vh 2vh;
-
-   h5 {
-      margin-bottom: 5vh;
-      &:nth-child(1) {
-         margin-left: 10vw;
-      }
-
-      &:nth-child(2) {
-         margin-left: 30vw;
-      }
-
-      &:nth-child(3) {
-         margin-left: 20vw;
-      }
-   }
 }

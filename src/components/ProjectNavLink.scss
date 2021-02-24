@@ -1,0 +1,30 @@
+@import "../styles/config";
+
+.project-nav-link {
+   font-style: italic;
+   margin-bottom: 10rem;
+
+   h5 {
+      font-size: calc(max(1.2vw, 18rem));
+   }
+
+   h6 {
+      padding-top: 5rem;
+      font-size: 16rem;
+      color: $green-blue;
+   }
+
+   ul {
+      padding: 10rem 0 10rem 10rem;
+   }
+
+   li {
+      font-size: 15rem;
+      padding-bottom: 5rem;
+   }
+
+   .details {
+      position: relative;
+      z-index: -1;
+   }
+}

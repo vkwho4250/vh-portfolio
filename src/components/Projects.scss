@@ -5,11 +5,13 @@
    width: 100vw;
 }
 
-.title-content {
-   padding: 5vh 2vw;
+.page-content {
+   padding: 0 8vw;
 
    h1 {
       font-size: calc(min(18vh, 15vw));
+      padding: 5vh 0;
+      color: $green-blue;
    }
 }
 
@@ -21,17 +23,25 @@
 
 .projects-container {
    display: grid;
-   grid-template-columns: 1fr 3fr;
-   height: 100vh;
+   grid-template-columns: 2fr 5fr;
 
    .nav-links {
-      padding-top: 20vh;
+      .project-list {
+         position: sticky;
+         top: 0;
+         left: 0;
+         padding: 15vh 0;
+         width: 250rem;
 
-      li {
-         font-style: italic;
+         .detail-options {
+            margin-bottom: 20%;
+            font-style: italic;
+            color: $green-blue;
 
-         h6:nth-child(2) {
-            padding-left: 2vw;
+            h6 {
+               margin-bottom: 10rem;
+               cursor: pointer;
+            }
          }
       }
    }

@@ -1,0 +1,28 @@
+@import "../styles/config";
+
+nav {
+   position: absolute;
+   z-index: 99;
+   padding: 10rem 5vw;
+   height: 35rem;
+   width: 100vw;
+   @include flex-container(space-between, baseline);
+   text-transform: uppercase;
+
+   .logo {
+      height: 100%;
+   }
+
+   ul {
+      display: flex;
+
+      li {
+         height: 100%;
+         padding: 0 15rem;
+      }
+   }
+}
+
+h6 {
+   font-size: 14rem;
+}

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Home.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactComponent as IceCityscape } from "../assets/SVG/iceberg.svg";
 
 function Home() {
    const [waterOpacity, setWaterOpacity] = useState(0.9);
@@ -15,64 +15,85 @@ function Home() {
       }
    }
 
+   const movement = {
+      initialDown: { y: -20, opacity: 0 },
+      initialUp: { y: 20, opacity: 0 },
+      initialLeft: { x: -15, opacity: 0 },
+      finalPosn: { x: 0, y: 0, opacity: 1 },
+   };
+
    return (
       <div id="home-page" className="home page">
-         <div className="bg">
-            <div className="ice-city-container">
-               {/* <IceCityscape className="ice-city" /> */}
-            </div>
+         <div className="bg-image">
+            <motion.div
+               intial={{ y: 0 }}
+               animate={{ y: [0, -4, 0] }}
+               transition={{
+                  repeat: Infinity,
+                  duration: 5,
+                  times: [0, 0.5, 1],
+               }}
+               className="ice-city-container"
+            ></motion.div>
             <div className="water" style={{ opacity: waterOpacity }}></div>
          </div>
 
-         <div className="scroll-container">
-            <FontAwesomeIcon icon="chevron-down" className="icon" />
-         </div>
-         {/* <div className="floater-nav">
-            <div>
-               <h5>01 / Learn more about me</h5>
-               <h5>02 / View my work</h5>
-               <h5>03 / Let's connect</h5>
-            </div>
-         </div> */}
          <div className="home-text">
-            <div className="title">
-               <div>
-                  <h2>Welcome! My name is</h2>
-                  <h1>Victoria Ho</h1>
-                  <div className="subheading">
-                     <h2>and I'm a</h2>
-                     <h2>
-                        <span>Front-end Developer.</span>
-                     </h2>
-                     {/* <p>
-                        Also a huge fan of <span>problem-solving</span>, deep
-                        diving for <span>answers</span> and bringing
-                        <span> creative solutions</span> to light.
-                     </p> */}
-                     <p>
-                        With a background in consulting and risk management, I
-                        know what it's like to <span>think ahead</span>,
-                        <span> dive deep</span> for answers, and
-                        <span> persist</span> when confronted with uncertainty.
-                     </p>
-                  </div>
-               </div>
+            <div className="main-text">
+               <motion.div
+                  className="headers"
+                  variants={movement}
+                  initial="initialDown"
+                  animate="finalPosn"
+                  transition={{ duration: 1 }}
+               >
+                  <h5>Welcome! My name is</h5>
+                  <h1>Victoria</h1>
+               </motion.div>
+               <motion.div
+                  className="subheading"
+                  variants={movement}
+                  initial="initialUp"
+                  animate="finalPosn"
+                  transition={{ duration: 1 }}
+               >
+                  <h2>
+                     <span>Front-end Developer</span>
+                  </h2>
+                  <h2>
+                     <span>Problem-Solver</span>
+                  </h2>
+                  <h2>
+                     <span>Creator</span>
+                  </h2>
+               </motion.div>
             </div>
-            <div className="description">
-               <div>
-                  {/* <p>
-                     With a background in consulting and risk management, I know
-                     what it's like to <span>think fast</span>,
-                     <span> think smart</span> and <span>persist</span> when
-                     confronted with uncertainty.
-                  </p> */}
-                  <h3>
-                     Now? <br /> I do that with code.
-                  </h3>
+            <div className="link-container">
+               <div className="arrow-down">
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                     <a href="/#about-page">
+                        <FontAwesomeIcon icon="chevron-down" className="icon" />
+                     </a>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                     <a href="/#projects-page">
+                        <FontAwesomeIcon icon="chevron-down" className="icon" />
+                     </a>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.1 }}>
+                     <a href="/#contact-page">
+                        <FontAwesomeIcon icon="chevron-down" className="icon" />
+                     </a>
+                  </motion.div>
                </div>
-               <div className="nav-links">
-                  <ul>
-                     <li>
+               <ul className="nav-links">
+                  <motion.li
+                     variants={movement}
+                     initial="initialLeft"
+                     animate="finalPosn"
+                     transition={{ duration: 0.5, delay: 1 }}
+                  >
+                     <a href="/#about-page">
                         <h5
                            index="1"
                            onMouseEnter={hoverOpacity}
@@ -80,8 +101,15 @@ function Home() {
                         >
                            01 / Learn more about me
                         </h5>
-                     </li>
-                     <li>
+                     </a>
+                  </motion.li>
+                  <motion.li
+                     variants={movement}
+                     initial="initialLeft"
+                     animate="finalPosn"
+                     transition={{ duration: 0.5, delay: 1.5 }}
+                  >
+                     <a href="/#projects-page">
                         <h5
                            index="2"
                            onMouseEnter={hoverOpacity}
@@ -89,19 +117,25 @@ function Home() {
                         >
                            02 / View my work
                         </h5>
-                     </li>
-                     <li>
+                     </a>
+                  </motion.li>
+                  <motion.li
+                     variants={movement}
+                     initial="initialLeft"
+                     animate="finalPosn"
+                     transition={{ duration: 0.5, delay: 2 }}
+                  >
+                     <a href="/#contact-page">
                         <h5
                            index="3"
                            onMouseEnter={hoverOpacity}
                            onMouseLeave={hoverOpacity}
                         >
-                           03 / Let's connect
+                           03 / Let's connect!
                         </h5>
-                     </li>
-                  </ul>
-                  {/* <h6>or take the wheel and explore!</h6> */}
-               </div>
+                     </a>
+                  </motion.li>
+               </ul>
             </div>
          </div>
       </div>

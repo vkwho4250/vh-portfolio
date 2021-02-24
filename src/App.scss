@@ -8,12 +8,13 @@
 
 html {
    font-size: 6.25%;
+   scroll-behavior: smooth;
 }
 
 body {
    width: 100vw;
-   font-family: "barlow condensed", sans-serif;
-   font-size: calc(max(1.1vw, 10rem));
+   font-family: "Barlow Condensed", sans-serif;
+   font-size: calc(max(1vw, 16rem));
    font-weight: 400;
    color: darken($text-color, 10%);
    background: $soft-white;
@@ -25,13 +26,16 @@ span {
    font-weight: 500;
 }
 
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
 %header-styles {
    font-family: "Barlow Condensed", sans-serif;
    font-weight: 400;
-   letter-spacing: 5rem;
    text-transform: uppercase;
-   color: $header-color;
-   margin: 0 0 1vh;
+   // color: $header-color;
 }
 
 h1,
@@ -44,16 +48,20 @@ h6 {
 }
 
 h1 {
-   font-size: calc(max(6.5vw, 23rem));
-   letter-spacing: 10rem;
+   font-size: calc(max(6.5vw, 24rem));
+   letter-spacing: 2rem;
 }
 
 h2 {
-   font-size: calc(max(2.3vw, 16rem));
+   font-size: calc(max(2.5vw, 16rem));
+
+   span {
+      text-transform: uppercase;
+   }
 }
 
 h3 {
-   font-size: calc(max(2.7vw, 18rem));
+   font-size: calc(max(0.8vw, 16rem));
    font-weight: 500;
 }
 
@@ -63,7 +71,7 @@ h4 {
 
 h5 {
    letter-spacing: 1rem;
-   font-size: calc(max(1.2vw, 10rem));
+   font-size: calc(max(1.5vw, 16rem));
    font-weight: 500;
 }
 
