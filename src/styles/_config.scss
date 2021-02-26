@@ -35,6 +35,36 @@ $light-text-color: $soft-white;
 $text-color: $dark-gray;
 $header-color: $dark-gray;
 
+%header-styles {
+   font-family: "Barlow Condensed", sans-serif;
+   font-weight: 400;
+   text-transform: uppercase;
+   // color: $header-color;
+}
+
+%selection-style {
+   color: $soft-white;
+   background: $green-blue;
+}
+
+%list-style {
+   display: flex;
+   margin-bottom: 5rem;
+
+   &::before {
+      content: "\2022";
+      color: $green-blue;
+      font-weight: bold;
+      display: inline-block;
+      width: 2rem;
+      margin-left: -1em;
+   }
+
+   p {
+      padding-left: 15rem;
+   }
+}
+
 @function set-header-color($bg-color) {
    @if (lightness($color) > 70) {
       @return $muted-black;
@@ -43,9 +73,11 @@ $header-color: $dark-gray;
    }
 }
 
-%fit-container {
-   width: 100%;
-   height: 100%;
+@mixin orange-dot($size) {
+   width: $size;
+   height: $size;
+   background: $bright-orange;
+   border-radius: 50%;
 }
 
 @mixin flex-container($justify, $align, $direction: row) {

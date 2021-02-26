@@ -18,7 +18,7 @@ function Home() {
    }
 
    return (
-      <div id="home-page" className="home">
+      <div id="home-page" className="home page">
          {/* == ICE-CITY SVG == */}
          <motion.div
             className="bg-image city-container"
@@ -85,6 +85,7 @@ function Home() {
                   animate="endingXY"
                   transition={{ duration: 1, delay: 0.5 }}
                >
+                  <h5>And I'm a</h5>
                   <h2>
                      <span>Front-end Developer</span>
                   </h2>
@@ -106,7 +107,7 @@ function Home() {
                >
                   <p>
                      With a passion for creative solutions, I'm using code to
-                     create experiences that delight, resolve, and satisfy, no
+                     create experiences that resolve, enhance and delight, no
                      matter the challenge.
                   </p>
                </motion.div>

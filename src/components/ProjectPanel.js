@@ -24,12 +24,8 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
       setAllDetails("");
    }, [allDetails]);
 
-   function handleDetails(e) {
-      if (e.type === "mouseenter") {
-         setShowDetails(true);
-      } else {
-         setShowDetails(false);
-      }
+   function handleDetails() {
+      setShowDetails(!showDetails);
    }
 
    return (
@@ -50,10 +46,20 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                </div>
             </div>
             <div className="links">
-               <a href={project.github} title={`${project.title} Github`}>
+               <a
+                  href={project.github}
+                  className={project.github === "" ? "no-display" : ""}
+                  title={`${project.title} Github`}
+                  target="_blank"
+               >
                   <FontAwesomeIcon icon={["fab", "github"]} className="icon" />
                </a>
-               <a href={project.site} title={`${project.title} Live Site`}>
+               <a
+                  href={project.site}
+                  className={project.site === "" ? "no-display" : ""}
+                  title={`${project.title} Live Site`}
+                  target="_blank"
+               >
                   <FontAwesomeIcon
                      icon="external-link-alt"
                      className="ext-link icon"
@@ -64,9 +70,7 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                <div className="text">
                   <h5>{project.title}</h5>
                   <h6 className="subheading">{project.description}</h6>
-                  <p onMouseEnter={handleDetails}>
-                     Take a look at my thought process
-                  </p>
+                  <p onClick={handleDetails}>Learn more about the process</p>
                </div>
                <div className="project-images">
                   <div className="back-images">
@@ -128,8 +132,22 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                </div>
             </div>
             <div className="next-steps">
-               <h6>View repository</h6>
-               <h6>Visit Live Site</h6>
+               <a
+                  href={project.github}
+                  className={project.github === "" ? "no-link" : ""}
+                  title={`${project.title} Github`}
+                  target="_blank"
+               >
+                  <h6>View repository</h6>
+               </a>
+               <a
+                  href={project.site}
+                  className={project.site === "" ? "no-link" : ""}
+                  title={`${project.title} Live Site`}
+                  target="_blank"
+               >
+                  <h6>Visit Live Site</h6>
+               </a>
             </div>
          </motion.div>
       </div>

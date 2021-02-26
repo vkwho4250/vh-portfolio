@@ -5,6 +5,13 @@ import ProjectInfo from "../data/ProjectInfo";
 import ProjectNavLink from "./ProjectNavLink";
 
 function Projects() {
+   const portfolio = {
+      title: "Portfolio",
+      folder: "You're already here :D",
+      description: "Count me in too!",
+      tech: ["React", "Sass", "Framer-Motion"],
+   };
+
    const [allDetails, setAllDetails] = useState("");
 
    function openAllDetails() {
@@ -16,7 +23,7 @@ function Projects() {
    }
 
    return (
-      <div id="projects-page">
+      <div id="projects-page" className="page">
          <div className="page-content">
             <div className="header">
                <h1>Projects</h1>
@@ -33,6 +40,11 @@ function Projects() {
                         </div>
                      </div>
                      <ul>
+                        <ProjectNavLink
+                           key={0}
+                           project={portfolio}
+                           index={-1}
+                        />
                         {ProjectInfo.map((project, index) => {
                            return (
                               <ProjectNavLink

@@ -22,22 +22,6 @@ body {
    // @include scrollbars(0, black, black);
 }
 
-span {
-   font-weight: 500;
-}
-
-a {
-   text-decoration: none;
-   color: inherit;
-}
-
-%header-styles {
-   font-family: "Barlow Condensed", sans-serif;
-   font-weight: 400;
-   text-transform: uppercase;
-   // color: $header-color;
-}
-
 h1,
 h2,
 h3,
@@ -45,11 +29,16 @@ h4,
 h5,
 h6 {
    @extend %header-styles;
+
+   &::selection {
+      @extend %selection-style;
+   }
 }
 
 h1 {
    font-size: calc(max(6.5vw, 24rem));
    letter-spacing: 2rem;
+   color: $green-blue;
 }
 
 h2 {
@@ -70,7 +59,10 @@ h3 {
 }
 
 h4 {
-   font-size: 26rem;
+   font-size: calc(max(1.2vw, 16rem));
+   text-transform: initial;
+   color: $green-blue;
+   font-style: italic;
 }
 
 h5 {
@@ -84,8 +76,27 @@ h6 {
    font-weight: 500;
 }
 
+span {
+   font-weight: 500;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
 li {
    list-style: none;
+}
+
+input,
+textarea,
+span,
+li,
+p {
+   &::selection {
+      @extend %selection-style;
+   }
 }
 
 .App {
@@ -101,6 +112,8 @@ li {
 .page {
    width: 100vw;
    min-height: 100vh;
+   margin: 15vh 0;
+   // border: 1rem solid red;
 }
 
 .no-display {

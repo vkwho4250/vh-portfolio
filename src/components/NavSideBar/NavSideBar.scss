@@ -11,10 +11,7 @@
    width: 6vw;
 
    .orange-dot {
-      width: 15rem;
-      height: 15rem;
-      border-radius: 50%;
-      background: $bright-orange;
+      @include orange-dot(15rem);
    }
 
    ul {

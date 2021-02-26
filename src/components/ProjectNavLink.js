@@ -16,9 +16,9 @@ function ProjectNavLink({ project, index }) {
 
    return (
       <li
+         className="project-nav-link"
          onMouseEnter={handleHover}
          onMouseLeave={handleHover}
-         className="project-nav-link"
       >
          <a href={`#${project.folder}`}>
             <h5>{`${String(index + 1).padStart(2, "0")} / ${
@@ -26,11 +26,11 @@ function ProjectNavLink({ project, index }) {
             }`}</h5>
 
             <motion.div
+               className="details"
                layout
                variants={Animations.collapse}
                animate={showDetails ? "open" : "close"}
                initial={false}
-               className="details"
             >
                <h6>{project.description}</h6>
                <ul>

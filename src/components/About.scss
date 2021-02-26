@@ -1,25 +1,119 @@
 @import "../styles/config";
 
-.about {
+#about-page {
    position: relative;
-   .main-content {
-      width: 50vw;
-      height: 100vh;
-   }
+   // overflow: hidden;
 
-   .ice-city-container {
-      position: absolute;
-      width: 50vw;
-      top: 25vh;
-      right: -2vw;
-      background: linear-gradient(
-            -0.45turn,
-            $sun-orange 20%,
-            $warm-pink 30%,
-            darken($water-blue, 5%),
-            lighten($ice-blue, 10%) 60%
-         )
-         no-repeat;
-      mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
+   .about {
+      width: 100vw;
+      padding: 0 8vw;
+
+      .content-container {
+         padding: 0 6vw 0 17vw;
+
+         .main-content {
+            position: relative;
+            @include flex-container(space-between, flex-start);
+
+            .image-container {
+               @include flex-container(flex-start, center);
+               width: 30%;
+               // border: 1rem solid red;
+               flex-direction: column;
+
+               .profile-pic {
+                  border-radius: 50%;
+                  width: 14vw;
+                  height: 14vw;
+                  background: url("../assets/profile.jpg") no-repeat center;
+                  background-size: 110%;
+               }
+
+               p {
+                  text-align: center;
+
+                  span {
+                     letter-spacing: 2rem;
+                     font-weight: 300;
+                  }
+               }
+            }
+
+            .main-text {
+               width: 100%;
+               padding-left: 4vw;
+
+               h2,
+               p {
+                  padding-bottom: 1.5vh;
+               }
+
+               h2 {
+                  letter-spacing: 1.5rem;
+               }
+
+               h5,
+               span {
+                  color: $green-blue;
+               }
+
+               h5 {
+                  margin-bottom: 2vh;
+               }
+            }
+         }
+
+         .subsection {
+            padding: 2vh 0;
+            // border: 1rem solid purple;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250rem, 1fr));
+            width: 100%;
+            column-gap: 3vw;
+            row-gap: 2vh;
+
+            ul {
+               padding-left: 1vw;
+
+               li {
+                  @extend %list-style;
+                  margin-bottom: 0;
+               }
+            }
+
+            .skills {
+               .tech-display {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fill, 60rem);
+                  row-gap: 1vh;
+               }
+            }
+         }
+      }
+
+      .timeline {
+         position: absolute;
+         left: 0;
+         top: 50vh;
+         width: 50%;
+         height: 100%;
+      }
+
+      .ice-city-container {
+         width: 100%;
+         height: 100%;
+         // left: 5vw;
+         background: linear-gradient(
+               -0.45turn,
+               $sun-orange 20%,
+               $warm-pink 30%,
+               darken($water-blue, 5%),
+               lighten($ice-blue, 10%) 60%
+            )
+            no-repeat;
+
+         background-size: fill;
+         mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
+      }
    }
 }

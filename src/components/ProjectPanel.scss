@@ -56,6 +56,9 @@ $test: soft-white;
          width: 20rem;
          height: 20rem;
          margin-bottom: 10rem;
+         &:hover {
+            color: $bright-orange;
+         }
       }
 
       .ext-link {
@@ -159,7 +162,7 @@ $test: soft-white;
 
    .notes-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250rem, 1fr));
       column-gap: 30rem;
       row-gap: 10rem;
    }
@@ -172,18 +175,7 @@ $test: soft-white;
          margin: 1.5vh 0 0 17rem;
 
          li {
-            margin-bottom: 5rem;
-            list-style-type: disc;
-
-            &::marker {
-               content: ">  ";
-               font-weight: 500;
-            }
-         }
-
-         p {
-            padding-left: 2rem;
-            // font-size: calc(max(0.9vw, 14rem));
+            @extend %list-style;
          }
       }
    }
@@ -200,52 +192,6 @@ $test: soft-white;
    }
 }
 
-// .yahtzee {
-//    background: #fec859;
-
-//    .closeBtn {
-//       background: lighten(#fec859, 10%);
-//    }
-
-//    .icon,
-//    h5,
-//    h6,
-//    p,
-//    li::marker {
-//       color: black;
-//    }
-// }
-
-// .vue-bj {
-//    background: #e2f2f0;
-
-//    .icon,
-//    h5,
-//    h6,
-//    p,
-//    li::marker {
-//       color: #18505d;
-//    }
-// }
-
-// .rps {
-//    background: #172042;
-
-//    h5,
-//    h6,
-//    p,
-//    li::marker {
-//       color: white;
-//    }
-// }
-
-// .react-bj {
-//    background: #c0dfc8;
-
-//    h5,
-//    h6,
-//    p,
-//    li::marker {
-//       color: black;
-//    }
-// }
+.no-link {
+   display: none;
+}
