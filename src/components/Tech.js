@@ -38,13 +38,22 @@ function Tech({ tech, techInFocus, changeTechInFocus }) {
 
    return (
       <div onClick={handleDisplay} id={tech.name} className="tech-box">
-         <div className="initial-display content">
+         <motion.div
+            className="initial-display content"
+            initial={{ y: 0 }}
+            animate={
+               showProjects && tech.projects.length !== 0
+                  ? { y: -60 }
+                  : { y: 0 }
+            }
+            transition={{ duration: 0.5, ease: "easeIn" }}
+         >
             <img
                src={`${process.env.PUBLIC_URL}/assets/tech/${tech.svg}.svg`}
                className="tech-icon"
             ></img>
             <p>{tech.name}</p>
-         </div>
+         </motion.div>
          <motion.div
             className={`content ${
                tech.projects.length !== 0 ? "projects" : ""

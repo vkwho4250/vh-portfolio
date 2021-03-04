@@ -26,6 +26,7 @@ $soft-white: #fcfcfc;
 $dark-gray: #636368;
 $green-blue: #3e8491;
 
+$moon-yellow: #e2e4d8;
 $warm-pink: #c49cab;
 $sun-orange: #e7c3a4;
 $bg-color: $soft-white;
@@ -45,6 +46,13 @@ $header-color: $dark-gray;
 %selection-style {
    color: $soft-white;
    background: $green-blue;
+}
+
+%side-bar {
+   position: fixed;
+   z-index: 99;
+   top: 0;
+   height: 100vh;
 }
 
 %list-style {
@@ -86,12 +94,6 @@ $header-color: $dark-gray;
    justify-content: $justify;
    align-items: $align;
    flex-direction: $direction;
-}
-
-%flex-center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 
 @mixin scrollbars(

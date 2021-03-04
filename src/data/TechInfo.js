@@ -83,9 +83,9 @@ const TechInfo = [
    },
 
    {
-      name: "figma",
+      name: "Figma",
       projects: [],
-      svg: "Figma",
+      svg: "figma",
    },
 ];
 

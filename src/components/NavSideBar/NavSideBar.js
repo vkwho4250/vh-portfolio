@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Animations from "../animation";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./NavSideBar.scss";
 
 function NavSideBar() {
    const navigation = ["home", "about", "projects", "contact"];
+   const [showSocials, setShowSocials] = useState(false);
 
    return (
       <motion.div
@@ -16,10 +18,8 @@ function NavSideBar() {
          animate="endingXY"
          transition={{ duration: 1, delay: 2.5 }}
       >
-         <a href="/#home-page">
-            <div className="orange-dot"></div>
-         </a>
-         <ul>
+         <div className="orange-dot"></div>
+         <ul className="page-nav">
             {navigation.map((page, index) => {
                return (
                   <li key={index}>

@@ -1,5 +1,3 @@
-import { deepOrange } from "@material-ui/core/colors";
-
 const collapse = {
    close: {
       opacity: 0,

@@ -14,7 +14,7 @@ const vueBulletJournal = {
       "each user required their own storage space and authentication",
    ],
    tech: ["Vue", "Vuex", "Node.js", "MongoDB", "REST API"],
-   screenshots: ["vue-bj-1", "vue-bj-2", "vue-bj-2"],
+   screenshots: ["vue-bj-1", "vue-bj-3", "vue-bj-2"],
    github: "https://github.com/vkwho4250/vue-bullet-journal",
    site: "https://vue-bullet-journal-vkwho.herokuapp.com/",
 };

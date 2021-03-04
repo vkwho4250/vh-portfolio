@@ -3,10 +3,9 @@
 nav {
    position: absolute;
    z-index: 99;
-   padding: 2vh 8vw;
-   // height: 45rem;
+   padding: 2vh 4vw;
    width: 100vw;
-   @include flex-container(space-between, baseline);
+   @include flex-container(space-between, center);
    text-transform: uppercase;
    background: linear-gradient($soft-white, transparent);
 
@@ -18,8 +17,10 @@ nav {
       display: flex;
 
       li {
-         height: 100%;
-         padding: 0 15rem;
+         @include flex-container(center, center);
+
+         height: 25rem;
+         margin: 0 15rem;
       }
    }
 }

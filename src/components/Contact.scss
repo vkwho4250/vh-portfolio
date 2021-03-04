@@ -1,7 +1,8 @@
 @import "../styles/config";
 
 #contact-page {
-   padding-bottom: 20vh;
+   position: relative;
+   overflow: hidden;
 
    .content {
       div,
@@ -62,7 +63,6 @@
    form {
       padding-top: 2vh;
       width: 40vw;
-      height: 50vh;
 
       textarea,
       input {
@@ -86,12 +86,9 @@
 
       button {
          background: darken($green-blue, 10%);
-         font: inherit;
          color: $soft-white;
          width: 70%;
          height: 40rem;
-         outline: none;
-         border: none;
          margin: 5vh 15%;
 
          &:hover {
@@ -100,5 +97,23 @@
             background: $bright-orange;
          }
       }
+   }
+
+   .ice-city-container {
+      position: absolute;
+      z-index: -1;
+      bottom: -25vw;
+      width: 50%;
+      height: 50vw;
+      background: linear-gradient(
+            0.45turn,
+            $moon-yellow 20%,
+            darken($water-blue, 5%),
+            darken($green-blue, 30%) 55%
+         )
+         no-repeat;
+
+      background-size: fill;
+      mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
    }
 }

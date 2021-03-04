@@ -8,17 +8,6 @@
 .page-content {
    padding: 0 8vw;
 
-   .header {
-      // @include flex-container(flex-start, center);
-
-      h1 {
-         // font-size: calc(max(5vw, 24rem));
-         padding-bottom: 5vh;
-         color: $green-blue;
-         padding-right: 2vw;
-      }
-   }
-
    .panel-container {
       width: 80%;
       display: grid;

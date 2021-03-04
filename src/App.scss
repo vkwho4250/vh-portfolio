@@ -19,7 +19,7 @@ body {
    color: darken($text-color, 10%);
    background: $soft-white;
    overflow-x: hidden;
-   // @include scrollbars(0, black, black);
+   @include scrollbars(0, black, black);
 }
 
 h1,
@@ -36,13 +36,13 @@ h6 {
 }
 
 h1 {
-   font-size: calc(max(6.5vw, 24rem));
+   font-size: calc(max(5.5vw, 24rem));
    letter-spacing: 2rem;
    color: $green-blue;
 }
 
 h2 {
-   font-size: calc(max(2vw, 16rem));
+   font-size: calc(max(1.7vw, 16rem));
    color: $green-blue;
 
    span {
@@ -67,7 +67,7 @@ h4 {
 
 h5 {
    letter-spacing: 1rem;
-   font-size: calc(max(1.3vw, 16rem));
+   font-size: calc(max(1.3vw, 14rem));
    font-weight: 500;
 }
 
@@ -87,6 +87,13 @@ a {
 
 li {
    list-style: none;
+}
+
+button {
+   font: inherit;
+   outline: none;
+   border: none;
+   background: none;
 }
 
 input,
@@ -112,8 +119,16 @@ p {
 .page {
    width: 100vw;
    min-height: 100vh;
-   margin: 15vh 0;
+   margin: 5vh 0;
    // border: 1rem solid red;
+}
+
+.title {
+   padding-bottom: 5vh;
+}
+
+svg.icon {
+   color: $green-blue;
 }
 
 .no-display {

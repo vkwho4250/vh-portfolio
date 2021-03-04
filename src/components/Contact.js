@@ -53,7 +53,7 @@ function Contact() {
                <textarea
                   name="message"
                   minLength="1"
-                  rows="6"
+                  rows="4"
                   columns="10"
                   placeholder="Message"
                ></textarea>
@@ -61,6 +61,7 @@ function Contact() {
                <button type="submit">On your mark, get set, let's chat!</button>
             </form>
          </div>
+         <div className="ice-city-container"></div>
       </div>
    );
 }
