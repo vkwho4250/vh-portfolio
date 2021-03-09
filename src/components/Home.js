@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Animations from "./animation";
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 
 import "./Home.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Home() {
+function Home({ changeCursorActive }) {
    const [waterOpacity, setWaterOpacity] = useState(0.9);
 
    function hoverOpacity(e) {
@@ -15,6 +15,7 @@ function Home() {
       } else {
          setWaterOpacity(0.9);
       }
+      changeCursorActive(e);
    }
 
    return (
@@ -37,6 +38,10 @@ function Home() {
                }}
             ></motion.div>
             <div className="water" style={{ opacity: waterOpacity }}></div>
+            <div className="water-text">
+               <h4>You're only at the tip of the iceberg!</h4>
+               <h4>Keep scrolling for a deeper dive</h4>
+            </div>
          </motion.div>
          <motion.div
             className="bg-image sun-container"
@@ -54,7 +59,7 @@ function Home() {
                initial="initialY"
                custom={-200}
                animate="endingXY"
-               transition={{ duration: 1.5 }}
+               transition={{ duration: 1.5, delay: 0.25 }}
             ></motion.div>
             <div className="home-text">
                <div className="left-border"></div>

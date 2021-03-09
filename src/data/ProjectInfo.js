@@ -1,17 +1,17 @@
 const vueBulletJournal = {
    title: "Vue Bullet Journal",
    folder: "vue-bj",
-   description: "The perfect tool to track and organize",
+   description: "The perfect tool for users to track, input and organize",
+   reasons: [
+      "a direct comparison between React and Vue",
+      "each user required their own storage space and authentication",
+      "to create a RESTful API and the accompanying back-end server",
+      "an opportunity to use global state management",
+   ],
    achievements: [
       "to plan and structure databases for efficient access and manipulation",
       "how to create an API that follows the REST model",
-      "to bridge back-end and front-end",
-   ],
-   reasons: [
-      "a direct comparison between React and Vue",
-      "lesson learned from prior project -- I needed global state management",
-      "could now focus on creating a RESTful API and the accompanying back-end server",
-      "each user required their own storage space and authentication",
+      "to connect back-end and front-end",
    ],
    tech: ["Vue", "Vuex", "Node.js", "MongoDB", "REST API"],
    screenshots: ["vue-bj-1", "vue-bj-3", "vue-bj-2"],
@@ -22,11 +22,11 @@ const vueBulletJournal = {
 const reactBulletJournal = {
    title: "React Bullet Journal",
    folder: "react-bj",
-   description: "In Progress",
+   description: "An 'at-a-glance' user interface for fans of BUJO",
    reasons: [
-      "contained many reusuable features/components which made sense to switch vanilla JS over to this framework",
-      "required all 4 core operations (CRUD) to prelude making a RESTful API ",
-      "Having once been a bullet journal user, imagine how much nicer it'd be if I didn't run out of pages?",
+      "contained many reusuable features/components",
+      "involved similar steps/functions for different tasks",
+      "required all 4 core operations (CRUD) as prelude to making a RESTful API ",
    ],
    achievements: [
       "the underlying structure of component-based frameworks",
@@ -42,11 +42,11 @@ const reactBulletJournal = {
 const yahtzee = {
    title: "Yahtzee",
    folder: "yahtzee",
-   description: "The classic dice strategy game",
+   description: "A modern take on the classic dice strategy game",
    reasons: [
-      "required user participation",
-      "involved routine, turn-based operations -- meant reuse of a couple key functions",
-      "game logic covered many of the JavaScript fundamentals",
+      "it required user interaction",
+      "involved routine, turn-based operations which allowed reuse of key functions",
+      "game logic can be executed using many of the JavaScript fundamentals",
    ],
    achievements: [
       "to structure code for readability and reusability",
@@ -65,9 +65,8 @@ const rockPaperScissors = {
    folder: "rps",
    description: "The game that never gets old",
    reasons: [
-      "break out of the tutorial trap and test my HTML, CSS and JS knowledge",
-      "get a sense of this common design-to-code process",
-      "very simple game logic -- allowed me to focus on styling and learning the jQuery syntax",
+      "to get a sense of this common design-to-code process",
+      "simple game logic allowed me to focus on styling and learning the jQuery syntax",
    ],
    achievements: [
       "to translate an idea to a responsive website",

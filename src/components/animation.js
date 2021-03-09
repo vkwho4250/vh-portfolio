@@ -22,6 +22,18 @@ const rotate = {
    endingRotation: { rotate: 0, opacity: 1 },
 };
 
-const Animations = { collapse, movement, rotate };
+const grow = {
+   inactive: {
+      scale: 1,
+      transition: { duration: 0.2, ease: "easeOut" },
+   },
+   active: {
+      scale: 2,
+      opacity: 0.5,
+      transition: { duration: 0.2, ease: "easeOut" },
+   },
+};
+
+const Animations = { collapse, movement, rotate, grow };
 
 export default Animations;

@@ -1,9 +1,7 @@
 import React from "react";
 import "./Contact.scss";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-function Contact() {
+function Contact({ changeCursorActive }) {
    return (
       <div id="contact-page" className="contact-page page">
          <div className="content">
@@ -23,7 +21,10 @@ function Contact() {
             </div>
 
             <div className="details">
-               <h3>
+               <h3
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
+               >
                   <span>
                      Shoot me an email at{" "}
                      <a href="mailto:vkwho4250@gmail.com" target="_blank">
@@ -41,6 +42,8 @@ function Contact() {
                   name="name"
                   minLength="1"
                   placeholder="Name"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                ></input>
 
                <input
@@ -48,6 +51,8 @@ function Contact() {
                   name="email"
                   minLength="1"
                   placeholder="Email"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                ></input>
 
                <textarea
@@ -56,6 +61,8 @@ function Contact() {
                   rows="4"
                   columns="10"
                   placeholder="Message"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                ></textarea>
 
                <button type="submit">On your mark, get set, let's chat!</button>

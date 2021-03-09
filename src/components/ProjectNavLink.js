@@ -3,7 +3,7 @@ import "./ProjectNavLink.scss";
 import Animations from "./animation";
 import { motion } from "framer-motion";
 
-function ProjectNavLink({ project, index }) {
+function ProjectNavLink({ project, index, changeCursorActive }) {
    const [showDetails, setShowDetails] = useState(false);
 
    function handleHover(e) {
@@ -20,7 +20,11 @@ function ProjectNavLink({ project, index }) {
          onMouseEnter={handleHover}
          onMouseLeave={handleHover}
       >
-         <a href={`#${project.folder}`}>
+         <a
+            href={`#${project.folder}`}
+            onMouseEnter={changeCursorActive}
+            onMouseLeave={changeCursorActive}
+         >
             <h5>{`${String(index + 1).padStart(2, "0")} / ${
                project.title
             }`}</h5>

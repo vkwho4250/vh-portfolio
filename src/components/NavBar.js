@@ -6,7 +6,9 @@ import "./NavBar.scss";
 
 import { ReactComponent as Logo } from "../assets/SVG/logo.svg";
 
-function NavBar() {
+function NavBar({ changeCursorActive }) {
+   const pages = ["about", "projects", "contact"];
+
    return (
       <motion.nav
          variants={Animations.movement}
@@ -17,22 +19,23 @@ function NavBar() {
       >
          <Logo className="logo" />
          <ul>
-            <li>
-               <a href="/#about-page">
-                  <h6>About</h6>
-               </a>
-            </li>
-            <li>
-               <a href="/#projects-page">
-                  <h6>Projects</h6>
-               </a>
-            </li>
-            <li>
-               <a href="/#contact-page">
-                  <h6>Contact</h6>
-               </a>
-            </li>
-            <li>
+            {pages.map((page, index) => {
+               return (
+                  <li
+                     key={index}
+                     onMouseEnter={changeCursorActive}
+                     onMouseLeave={changeCursorActive}
+                  >
+                     <a href={`/#${page}-page`}>
+                        <h6>{page}</h6>
+                     </a>
+                  </li>
+               );
+            })}
+            <li
+               onMouseEnter={changeCursorActive}
+               onMouseLeave={changeCursorActive}
+            >
                <ResumeBtn />
             </li>
          </ul>

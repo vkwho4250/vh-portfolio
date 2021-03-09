@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TechInfo from "../data/TechInfo";
 import Tech from "./Tech";
 
-function About() {
+function About({ changeCursorActive }) {
    const [techInFocus, setTechInFocus] = useState("");
 
    function changeTechInFocus(techName) {
@@ -28,12 +28,18 @@ function About() {
                      or in front of it.
                   </p>
                   <ul className="socials">
-                     <li>
+                     <li
+                        onMouseEnter={changeCursorActive}
+                        onMouseLeave={changeCursorActive}
+                     >
                         <a href="mailto:vkwho4250@gmail.com" target="_blank">
                            <FontAwesomeIcon icon="envelope" className="icon" />
                         </a>
                      </li>
-                     <li>
+                     <li
+                        onMouseEnter={changeCursorActive}
+                        onMouseLeave={changeCursorActive}
+                     >
                         <a
                            href="https://www.linkedin.com/in/victoria-kw-ho/"
                            target="_blank"
@@ -44,7 +50,10 @@ function About() {
                            />
                         </a>
                      </li>
-                     <li>
+                     <li
+                        onMouseEnter={changeCursorActive}
+                        onMouseLeave={changeCursorActive}
+                     >
                         <a href="https://github.com/vkwho4250" target="_blank">
                            <FontAwesomeIcon
                               icon={["fab", "github"]}
@@ -57,10 +66,10 @@ function About() {
                <div className="main-text">
                   <div className="summary">
                      <h2>
-                        <span>Hi, I'm Victoria!</span>
+                        <span>Hi, I'm Victoria! </span>
                      </h2>
                      <p>
-                        I'm a front-end developer based in Toronto. I'm also an
+                        I'm a front-end developer based in Toronto and an
                         advocate for <span>continuous learning</span>,{" "}
                         <span>big picture thinking</span> and{" "}
                         <span>smart solutions</span> in both life and work.
@@ -74,10 +83,11 @@ function About() {
                         usability.
                      </p>
                      <p>
-                        Combining my technical foundation and unique
-                        experiences, I am a fast learner committed to writing
-                        reusable, quality code for user-friendly web
-                        applications.
+                        I pride myself on being unafraid to dig deep and
+                        presevering when faced with a new challenge. Combining
+                        my technical foundation and unique experiences, I choose
+                        clean, quality code as my weapon of choice to solve
+                        problems, innovate and make an impact.
                      </p>
                   </div>
 
@@ -89,7 +99,7 @@ function About() {
                               <p>Deep reflection</p>
                            </li>
                            <li>
-                              <p>Time with friends and family</p>
+                              <p>Time spent with friends and family</p>
                            </li>
                            <li>
                               <p>
@@ -115,6 +125,7 @@ function About() {
                                     tech={tech}
                                     techInFocus={techInFocus}
                                     changeTechInFocus={changeTechInFocus}
+                                    changeCursorActive={changeCursorActive}
                                  />
                               );
                            })}

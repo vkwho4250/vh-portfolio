@@ -4,7 +4,7 @@ import ProjectPanel from "./ProjectPanel";
 import ProjectInfo from "../data/ProjectInfo";
 import ProjectNavLink from "./ProjectNavLink";
 
-function Projects() {
+function Projects({ changeCursorActive }) {
    const portfolio = {
       title: "Portfolio",
       folder: "You're already here :D",
@@ -32,10 +32,18 @@ function Projects() {
                <div className="nav-links">
                   <div className="project-list">
                      <div className="detail-options">
-                        <div onClick={openAllDetails}>
+                        <div
+                           onClick={openAllDetails}
+                           onMouseEnter={changeCursorActive}
+                           onMouseLeave={changeCursorActive}
+                        >
                            <h6>Expand All Details</h6>
                         </div>
-                        <div onClick={closeAllDetails}>
+                        <div
+                           onClick={closeAllDetails}
+                           onMouseEnter={changeCursorActive}
+                           onMouseLeave={changeCursorActive}
+                        >
                            <h6>Collapse All Details</h6>
                         </div>
                      </div>
@@ -44,6 +52,7 @@ function Projects() {
                            key={0}
                            project={portfolio}
                            index={-1}
+                           changeCursorActive={changeCursorActive}
                         />
                         {ProjectInfo.map((project, index) => {
                            return (
@@ -51,6 +60,7 @@ function Projects() {
                                  key={index}
                                  project={project}
                                  index={index}
+                                 changeCursorActive={changeCursorActive}
                               />
                            );
                         })}
@@ -66,6 +76,7 @@ function Projects() {
                            index={index}
                            allDetails={allDetails}
                            setAllDetails={setAllDetails}
+                           changeCursorActive={changeCursorActive}
                         />
                      );
                   })}

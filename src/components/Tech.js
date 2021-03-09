@@ -3,7 +3,7 @@ import "./Tech.scss";
 import ProjectInfo from "../data/ProjectInfo";
 import { motion } from "framer-motion";
 
-function Tech({ tech, techInFocus, changeTechInFocus }) {
+function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
    const [techProjects, setTechProjects] = useState([]);
    const [showProjects, setShowProjects] = useState(false);
 
@@ -37,7 +37,13 @@ function Tech({ tech, techInFocus, changeTechInFocus }) {
    }
 
    return (
-      <div onClick={handleDisplay} id={tech.name} className="tech-box">
+      <div
+         onMouseEnter={tech.projects.length !== 0 ? changeCursorActive : null}
+         onMouseLeave={tech.projects.length !== 0 ? changeCursorActive : null}
+         onClick={handleDisplay}
+         id={tech.name}
+         className="tech-box"
+      >
          <motion.div
             className="initial-display content"
             initial={{ y: 0 }}
@@ -46,7 +52,7 @@ function Tech({ tech, techInFocus, changeTechInFocus }) {
                   ? { y: -60 }
                   : { y: 0 }
             }
-            transition={{ duration: 0.5, ease: "easeIn" }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
          >
             <img
                src={`${process.env.PUBLIC_URL}/assets/tech/${tech.svg}.svg`}
@@ -60,7 +66,7 @@ function Tech({ tech, techInFocus, changeTechInFocus }) {
             }`}
             initial={{ y: 0 }}
             animate={showProjects ? { y: -60 } : { y: 0 }}
-            transition={{ duration: 0.5, ease: "easeIn" }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
          >
             {techProjects.map((project, index) => {
                return (

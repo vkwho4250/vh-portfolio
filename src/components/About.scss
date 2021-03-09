@@ -7,6 +7,10 @@
    .content-container {
       padding: 2.5vh 8vw 0;
 
+      .title {
+         padding-bottom: 5vh;
+      }
+
       .main-content {
          position: relative;
          @include flex-container(space-between, flex-start);
@@ -37,9 +41,13 @@
                }
             }
 
-            ul {
+            .socials {
                @include flex-container(space-between, center);
                width: 7vw;
+
+               .icon:hover {
+                  color: $bright-orange;
+               }
             }
          }
 
@@ -93,14 +101,6 @@
             }
          }
       }
-   }
-
-   .timeline {
-      position: absolute;
-      left: 0;
-      top: 50vh;
-      width: 50%;
-      height: 100%;
    }
 
    .ice-city-container {

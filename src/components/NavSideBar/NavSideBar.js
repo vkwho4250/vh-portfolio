@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Animations from "../animation";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./NavSideBar.scss";
 
-function NavSideBar() {
+function NavSideBar({ changeCursorActive }) {
    const navigation = ["home", "about", "projects", "contact"];
-   const [showSocials, setShowSocials] = useState(false);
 
    return (
       <motion.div
@@ -22,7 +20,11 @@ function NavSideBar() {
          <ul className="page-nav">
             {navigation.map((page, index) => {
                return (
-                  <li key={index}>
+                  <li
+                     key={index}
+                     onMouseEnter={changeCursorActive}
+                     onMouseLeave={changeCursorActive}
+                  >
                      <a href={`/#${page}-page`}>
                         <h6>{page}</h6>
                      </a>

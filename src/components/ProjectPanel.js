@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Animations from "./animation";
 
-function ProjectPanel({ project, index, allDetails, setAllDetails }) {
+function ProjectPanel({
+   project,
+   index,
+   allDetails,
+   setAllDetails,
+   changeCursorActive,
+}) {
    const [showDetails, setShowDetails] = useState(false);
 
    useEffect(() => {
@@ -51,6 +57,8 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                   className={project.github === "" ? "no-display" : ""}
                   title={`${project.title} Github`}
                   target="_blank"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                >
                   <FontAwesomeIcon icon={["fab", "github"]} className="icon" />
                </a>
@@ -59,6 +67,8 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                   className={project.site === "" ? "no-display" : ""}
                   title={`${project.title} Live Site`}
                   target="_blank"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                >
                   <FontAwesomeIcon
                      icon="external-link-alt"
@@ -70,7 +80,13 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                <div className="text">
                   <h5>{project.title}</h5>
                   <h6 className="subheading">{project.description}</h6>
-                  <p onClick={handleDetails}>Learn more about the process</p>
+                  <p
+                     onClick={handleDetails}
+                     onMouseEnter={changeCursorActive}
+                     onMouseLeave={changeCursorActive}
+                  >
+                     Learn more about my thought process
+                  </p>
                </div>
                <div className="project-images">
                   <div className="back-images">
@@ -137,6 +153,8 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                   className={project.github === "" ? "no-link" : ""}
                   title={`${project.title} Github`}
                   target="_blank"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                >
                   <h6>View repository</h6>
                </a>
@@ -145,8 +163,10 @@ function ProjectPanel({ project, index, allDetails, setAllDetails }) {
                   className={project.site === "" ? "no-link" : ""}
                   title={`${project.title} Live Site`}
                   target="_blank"
+                  onMouseEnter={changeCursorActive}
+                  onMouseLeave={changeCursorActive}
                >
-                  <h6>Visit Live Site</h6>
+                  <h6>Visit Live Demo</h6>
                </a>
             </div>
          </motion.div>
