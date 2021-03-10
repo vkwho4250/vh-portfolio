@@ -18,18 +18,20 @@
          color: darken($green-blue, 10%);
       }
 
-      .main-text {
-         padding: 5vh 22vw 1vh;
+      .title-text {
+         @include flex-container(center, center);
+         flex-direction: column;
+         padding: 4vh 20vw;
          background: darken($green-blue, 10%);
-
-         .subheading {
-            margin: 5vh auto;
-         }
 
          h2,
          h3,
-         h5 {
+         .icon {
             color: $soft-white;
+         }
+
+         .icon:hover {
+            color: $bright-orange;
          }
 
          h2 {
@@ -44,7 +46,7 @@
 
    .details {
       padding-top: 4vh;
-      width: 30vw;
+      width: calc(min(400rem, 70vw));
 
       h3 {
          text-transform: initial;
@@ -61,7 +63,7 @@
    }
 
    form {
-      width: 40vw;
+      width: calc(min(600rem, 80vw));
 
       textarea,
       input {
@@ -87,8 +89,8 @@
          background: darken($green-blue, 10%);
          color: $soft-white;
          width: 70%;
-         height: 40rem;
-         margin: 2vh 15%;
+         padding: 5rem;
+         margin: 2vh 20%;
 
          &:hover {
             font-weight: 500;

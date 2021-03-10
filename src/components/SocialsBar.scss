@@ -1,24 +1,11 @@
 @import "../styles/config";
 
-#socials-bar {
-   // @include flex-container(flex-end, center);
-   @extend %side-bar;
-   left: 0;
-   width: 4vw;
+.socials {
+   @include flex-container(space-between, center);
+   width: 90rem;
+   margin: 2vh auto;
 
-   ul {
-      position: absolute;
-      @include flex-container(space-between, center);
-      flex-direction: column;
-
-      li {
-         margin-top: 10rem;
-
-         .line {
-            width: 1rem;
-            height: 15vh;
-            background: $green-blue;
-         }
-      }
+   svg.icon:hover {
+      color: $bright-orange;
    }
 }

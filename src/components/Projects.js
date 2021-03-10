@@ -24,63 +24,61 @@ function Projects({ changeCursorActive }) {
 
    return (
       <div id="projects-page" className="page">
-         <div className="page-content">
-            <h1 className="page-title">
-               <span>Projects</span>
-            </h1>
-            <div className="projects-container">
-               <div className="nav-links">
-                  <div className="project-list">
-                     <div className="detail-options">
-                        <div
-                           onClick={openAllDetails}
-                           onMouseEnter={changeCursorActive}
-                           onMouseLeave={changeCursorActive}
-                        >
-                           <h6>Expand All Details</h6>
-                        </div>
-                        <div
-                           onClick={closeAllDetails}
-                           onMouseEnter={changeCursorActive}
-                           onMouseLeave={changeCursorActive}
-                        >
-                           <h6>Collapse All Details</h6>
-                        </div>
+         <h1 className="page-title">
+            <span>Projects</span>
+         </h1>
+         <div className="projects-container">
+            <div className="nav-links">
+               <div className="project-list">
+                  <div className="detail-options">
+                     <div
+                        onClick={openAllDetails}
+                        onMouseEnter={changeCursorActive}
+                        onMouseLeave={changeCursorActive}
+                     >
+                        <h6>Expand All Details</h6>
                      </div>
-                     <ul>
-                        <ProjectNavLink
-                           key={0}
-                           project={portfolio}
-                           index={-1}
-                           changeCursorActive={changeCursorActive}
-                        />
-                        {ProjectInfo.map((project, index) => {
-                           return (
-                              <ProjectNavLink
-                                 key={index}
-                                 project={project}
-                                 index={index}
-                                 changeCursorActive={changeCursorActive}
-                              />
-                           );
-                        })}
-                     </ul>
+                     <div
+                        onClick={closeAllDetails}
+                        onMouseEnter={changeCursorActive}
+                        onMouseLeave={changeCursorActive}
+                     >
+                        <h6>Collapse All Details</h6>
+                     </div>
                   </div>
+                  <ul>
+                     <ProjectNavLink
+                        key={0}
+                        project={portfolio}
+                        index={-1}
+                        changeCursorActive={changeCursorActive}
+                     />
+                     {ProjectInfo.map((project, index) => {
+                        return (
+                           <ProjectNavLink
+                              key={index}
+                              project={project}
+                              index={index}
+                              changeCursorActive={changeCursorActive}
+                           />
+                        );
+                     })}
+                  </ul>
                </div>
-               <div className="panel-container">
-                  {ProjectInfo.map((project, index) => {
-                     return (
-                        <ProjectPanel
-                           key={index}
-                           project={project}
-                           index={index}
-                           allDetails={allDetails}
-                           setAllDetails={setAllDetails}
-                           changeCursorActive={changeCursorActive}
-                        />
-                     );
-                  })}
-               </div>
+            </div>
+            <div className="panel-container">
+               {ProjectInfo.map((project, index) => {
+                  return (
+                     <ProjectPanel
+                        key={index}
+                        project={project}
+                        index={index}
+                        allDetails={allDetails}
+                        setAllDetails={setAllDetails}
+                        changeCursorActive={changeCursorActive}
+                     />
+                  );
+               })}
             </div>
          </div>
       </div>

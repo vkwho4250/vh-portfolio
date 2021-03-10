@@ -3,119 +3,111 @@
 #about-page {
    position: relative;
    background: rgba(lighten($green-blue, 40%), 0.15);
+   padding: 5vh 16vw 5vh 8vw;
 
-   .content-container {
-      padding: 2.5vh 8vw 0;
+   h5,
+   span {
+      color: $green-blue;
+   }
 
-      .title {
-         padding-bottom: 5vh;
+   h2,
+   p,
+   h5 {
+      margin-bottom: 2vh;
+   }
+
+   h2 {
+      letter-spacing: 1.5rem;
+   }
+}
+
+.title {
+   padding-bottom: 5vh;
+}
+
+.main-content {
+   position: relative;
+   display: grid;
+   grid-template-columns: 1fr 2fr 2fr;
+   column-gap: 5vw;
+   row-gap: 2vh;
+}
+
+// Profil- left
+.profile-container {
+   grid-area: 1 / 1 / 3 / 1;
+   @include flex-container(flex-start, center);
+   flex-direction: column;
+
+   h5 {
+      text-align: center;
+   }
+
+   .profile-pic {
+      border-radius: 50%;
+      width: 14vw;
+      height: 14vw;
+      background: url("../assets/profile.jpg") no-repeat center;
+      background-size: 110%;
+      margin-bottom: 2vh;
+   }
+
+   .resume-btn {
+      width: 120rem;
+   }
+}
+
+.summary {
+   grid-area: 1 / 2 / 2 / 4;
+}
+
+.extras {
+   ul {
+      padding-left: 2vw;
+
+      li {
+         @extend %list-style;
+         margin-bottom: 0;
       }
+   }
+}
 
-      .main-content {
-         position: relative;
-         @include flex-container(space-between, flex-start);
+.skills {
+   .tech-display {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 60rem);
+      row-gap: 1vh;
+   }
+}
 
-         .image-container {
-            @include flex-container(flex-start, center);
-            width: 30%;
-            flex-direction: column;
+@media (max-width: 923px) {
+   .extras {
+      grid-area: 2 / 2 / 3 / 4;
+   }
 
-            .profile-pic {
-               border-radius: 50%;
-               width: 14vw;
-               height: 14vw;
-               background: url("../assets/profile.jpg") no-repeat center;
-               background-size: 110%;
-            }
+   .skills {
+      grid-area: 3 / 2 / 4 / 4;
+   }
+}
 
-            p {
-               padding: 2vh 0;
+@media (max-width: 540px) {
+   .main-content {
+      display: block;
+   }
 
-               text-align: center;
-               font-size: calc(max(1vw, 15rem));
-               color: $green-blue;
+   .profile-container {
+      flex-direction: row;
 
-               span {
-                  letter-spacing: 2rem;
-                  font-weight: 300;
-               }
-            }
-
-            .socials {
-               @include flex-container(space-between, center);
-               width: 7vw;
-
-               .icon:hover {
-                  color: $bright-orange;
-               }
-            }
-         }
-
-         .main-text {
-            width: 100%;
-            padding-left: 4vw;
-
-            h2,
-            p {
-               padding-bottom: 1.5vh;
-            }
-
-            h2 {
-               letter-spacing: 1.5rem;
-            }
-
-            h5,
-            span {
-               color: $green-blue;
-            }
-
-            h5 {
-               margin-bottom: 2vh;
-            }
-         }
-      }
-
-      .subsection {
-         padding: 2vh 0;
-         // border: 1rem solid purple;
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(240rem, 1fr));
-         width: 100%;
-         column-gap: 3vw;
-         row-gap: 2vh;
-
-         ul {
-            padding-left: 1vw;
-
-            li {
-               @extend %list-style;
-               margin-bottom: 0;
-            }
-         }
-
-         .skills {
-            .tech-display {
-               display: grid;
-               grid-template-columns: repeat(auto-fill, 60rem);
-               row-gap: 1vh;
-            }
-         }
+      .profile-pic {
+         width: 30vw;
+         height: 30vw;
+         margin-right: 5vw;
       }
    }
 
-   .ice-city-container {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-            -0.45turn,
-            $sun-orange 20%,
-            $warm-pink 30%,
-            darken($water-blue, 5%),
-            lighten($ice-blue, 10%) 60%
-         )
-         no-repeat;
-
-      background-size: fill;
-      mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
+   .summary,
+   .extras,
+   .skills {
+      margin: 2vh 0;
    }
 }

@@ -51,7 +51,7 @@ function ProjectPanel({
                   </ul>
                </div>
             </div>
-            <div className="links">
+            <div className="links desktop">
                <a
                   href={project.github}
                   className={project.github === "" ? "no-display" : ""}
@@ -80,6 +80,49 @@ function ProjectPanel({
                <div className="text">
                   <h5>{project.title}</h5>
                   <h6 className="subheading">{project.description}</h6>
+                  <div className="mobile">
+                     <h4 className="tech-list">
+                        {project.tech.map((tech, index) => {
+                           return (
+                              <span key={index}>
+                                 {tech +
+                                    (index !== project.tech.length - 1
+                                       ? ", "
+                                       : "")}
+                              </span>
+                           );
+                        })}
+                     </h4>
+
+                     <div className="links">
+                        <a
+                           href={project.github}
+                           className={project.github === "" ? "no-display" : ""}
+                           title={`${project.title} Github`}
+                           target="_blank"
+                           onMouseEnter={changeCursorActive}
+                           onMouseLeave={changeCursorActive}
+                        >
+                           <FontAwesomeIcon
+                              icon={["fab", "github"]}
+                              className="icon"
+                           />
+                        </a>
+                        <a
+                           href={project.site}
+                           className={project.site === "" ? "no-display" : ""}
+                           title={`${project.title} Live Site`}
+                           target="_blank"
+                           onMouseEnter={changeCursorActive}
+                           onMouseLeave={changeCursorActive}
+                        >
+                           <FontAwesomeIcon
+                              icon="external-link-alt"
+                              className="ext-link icon"
+                           />
+                        </a>
+                     </div>
+                  </div>
                   <p
                      onClick={handleDetails}
                      onMouseEnter={changeCursorActive}
@@ -135,7 +178,7 @@ function ProjectPanel({
                   </ul>
                </div>
                <div className="achievements-container">
-                  <h5>I learned</h5>
+                  <h5>I learned:</h5>
                   <ul>
                      {project.achievements.map((point, index) => {
                         return (
@@ -150,7 +193,7 @@ function ProjectPanel({
             <div className="next-steps">
                <a
                   href={project.github}
-                  className={project.github === "" ? "no-link" : ""}
+                  className={project.github === "" ? "no-display" : ""}
                   title={`${project.title} Github`}
                   target="_blank"
                   onMouseEnter={changeCursorActive}
@@ -160,7 +203,7 @@ function ProjectPanel({
                </a>
                <a
                   href={project.site}
-                  className={project.site === "" ? "no-link" : ""}
+                  className={project.site === "" ? "no-display" : ""}
                   title={`${project.title} Live Site`}
                   target="_blank"
                   onMouseEnter={changeCursorActive}

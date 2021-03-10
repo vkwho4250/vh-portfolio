@@ -13,119 +13,119 @@
    min-height: 250rem;
    display: grid;
    grid-template-columns: 140rem 40rem 1fr;
+}
 
-   .project-details {
-      h2 {
-         font-size: calc(max(3vw, 50rem));
-         letter-spacing: 2rem;
-         font-style: italic;
-      }
+.project-details {
+   h2 {
+      font-size: calc(max(3vw, 50rem));
+      letter-spacing: 2rem;
+      font-style: italic;
+   }
 
-      .divider {
-         position: relative;
-         margin-top: 10rem;
-         border-top: 2rem solid $text-color;
-         width: 80%;
-         transform: skewY(-50deg);
-      }
+   .divider {
+      position: relative;
+      margin-top: 10rem;
+      border-top: 2rem solid $text-color;
+      width: 80%;
+      transform: skewY(-50deg);
+   }
 
-      ul {
-         position: relative;
-         top: 80rem;
-         left: 40rem;
-         transform: skewY(50deg);
-         height: 50%;
+   ul {
+      position: relative;
+      top: 80rem;
+      left: 40rem;
+      transform: skewY(50deg);
+      height: 50%;
+   }
+}
+
+.links {
+   padding-top: 14rem;
+   @include flex-container(flex-start, center);
+   flex-direction: column;
+
+   .icon {
+      width: 20rem;
+      height: 20rem;
+      margin-bottom: 10rem;
+
+      &:hover {
+         color: $bright-orange;
       }
    }
 
-   .links {
-      padding-top: 14rem;
-      @include flex-container(flex-start, center);
-      flex-direction: column;
+   .ext-link {
+      transform: scale(0.8);
+   }
+}
 
-      .icon {
-         width: 20rem;
-         height: 20rem;
-         margin-bottom: 10rem;
+.project-desc {
+   position: relative;
+   width: 100%;
+   @include flex-container(flex-start, flex-start);
 
-         &:hover {
-            color: $bright-orange;
-         }
+   .text {
+      width: 40%;
+      padding: 9rem;
+      color: $text-color;
+
+      .subheading {
+         font-size: calc(max(0.8vw, 2.2vh));
+         color: $green-blue;
+         margin: 10rem 0;
       }
 
-      .ext-link {
-         transform: scale(0.8);
+      h5 {
+         font-size: calc(max(1.5vw, 4vh));
       }
    }
 
-   .project-desc {
+   .project-images {
+      position: relative;
+      height: fit-content;
+      width: 60%;
+      min-width: 200rem;
+      margin: 40rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > div {
+         height: 100%;
+      }
+   }
+
+   img {
+      padding: 2.5%;
+      max-width: 100%;
+   }
+
+   .img-container {
+      @include flex-container(center, center);
+      background: rgba(darken($ice-gray, 10%), 0.3);
+      backdrop-filter: blur(5rem);
+   }
+
+   .back-images {
       position: relative;
       width: 100%;
-      @include flex-container(flex-start, flex-start);
+      height: 100%;
 
-      .text {
-         width: 40%;
-         padding: 9rem;
-         color: $text-color;
-
-         .subheading {
-            font-size: calc(max(0.8vw, 2.2vh));
-            color: $green-blue;
-            margin: 10rem 0;
-         }
-
-         h5 {
-            font-size: calc(max(1.5vw, 4vh));
-         }
-      }
-
-      .project-images {
-         position: relative;
-         height: fit-content;
-         width: 60%;
-         min-width: 200rem;
-         margin: 40rem 0;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-
-         > div {
-            height: 100%;
-         }
-      }
-
-      img {
-         padding: 2.5%;
-         max-width: 100%;
-      }
+      @include flex-container(space-between, center);
 
       .img-container {
-         @include flex-container(center, center);
-         background: rgba(darken($ice-gray, 10%), 0.3);
-         backdrop-filter: blur(5rem);
+         height: auto;
+         width: 50%;
       }
+   }
 
-      .back-images {
-         position: relative;
-         width: 100%;
-         height: 100%;
+   .front-image {
+      position: absolute;
+      @include flex-container(center, center);
+      width: 60%;
 
-         @include flex-container(space-between, center);
-
-         .img-container {
-            height: auto;
-            width: 50%;
-         }
-      }
-
-      .front-image {
-         position: absolute;
-         @include flex-container(center, center);
-         width: 60%;
-
-         .img-container {
-            height: auto;
-         }
+      .img-container {
+         height: auto;
       }
    }
 }
@@ -134,7 +134,7 @@
    background: lighten($green-blue, 50%);
    position: relative;
    margin-left: 140rem;
-   padding: 1vw 2vw;
+   padding: 2vh 2vw;
 
    .closeBtn {
       @include flex-container(center, flex-start);
@@ -183,6 +183,52 @@
    }
 }
 
-.no-link {
+.mobile {
    display: none;
+}
+
+@media (max-width: 1200px) {
+   .project-desc {
+      display: block;
+
+      .text {
+         width: 100%;
+      }
+
+      .project-images {
+         width: 80%;
+         margin: 5vh auto;
+      }
+   }
+
+   .secondary-panel {
+      margin-left: 40rem;
+   }
+}
+
+// TABLET / MOBILE
+
+@media (max-width: 923px) {
+   .main-panel {
+      display: block;
+   }
+
+   .project-details,
+   .desktop {
+      display: none;
+   }
+
+   .mobile {
+      display: inline-block;
+
+      .links {
+         flex-direction: row;
+         padding: 1vh 0;
+         width: auto;
+
+         a {
+            margin-right: 10rem;
+         }
+      }
+   }
 }

@@ -1,15 +1,18 @@
 import React from "react";
 import "./Contact.scss";
 
+import SocialsBar from "./SocialsBar";
+
 function Contact({ changeCursorActive }) {
    return (
       <div id="contact-page" className="contact-page page">
          <div className="content">
-            <div className="main-text">
+            <div className="title-text">
                <h2>
                   <span>Let's connect!</span>
                </h2>
-               <div className="subheading">
+               <SocialsBar changeCursorActive={changeCursorActive} />
+               <div className="title-paragraph">
                   <h3>
                      I'd love an opportunity to speak with you and hear about
                      your journey as well. Anything from experiences to your

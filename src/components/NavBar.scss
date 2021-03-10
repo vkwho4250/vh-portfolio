@@ -3,28 +3,71 @@
 nav {
    position: absolute;
    z-index: 99;
-   padding: 2vh 4vw;
+   height: 5vh;
+   padding: 0 4vw;
    width: 100vw;
    @include flex-container(space-between, center);
    text-transform: uppercase;
    background: linear-gradient($soft-white, transparent);
+}
+.logo {
+   height: 15rem;
+}
 
-   .logo {
-      height: 15rem;
-   }
+.page-nav-links {
+   display: flex;
+   width: 50vw;
 
-   ul {
-      display: flex;
+   li {
+      @include flex-container(center, center);
 
-      li {
-         @include flex-container(center, center);
-
-         height: 25rem;
-         margin: 0 15rem;
-      }
+      height: 25rem;
+      margin: 0 15rem;
    }
 }
 
 h6 {
    font-size: 14rem;
+}
+
+.menu {
+   display: none;
+}
+
+@media (max-width: 540px) {
+   nav {
+      position: fixed;
+      background: $soft-white;
+      box-shadow: 0 0 5rem -1rem rgba($green-blue, 0.5);
+   }
+
+   .page-nav-links {
+      position: absolute;
+      top: -300rem;
+      left: 0;
+      flex-direction: column;
+      background: $soft-white;
+      width: 100%;
+      opacity: 0;
+      transition: all 1s;
+
+      li {
+         margin: 0;
+      }
+
+      &.open {
+         top: 5vh;
+         opacity: 1;
+      }
+   }
+
+   .menu {
+      @include flex-container(center, center);
+      height: 100%;
+      width: 30rem;
+
+      .menu-btn {
+         position: absolute;
+      }
+   }
 }

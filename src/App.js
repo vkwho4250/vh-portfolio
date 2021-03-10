@@ -18,6 +18,7 @@ import {
    faEnvelope,
    faDownload,
    faInfo,
+   faEllipsisH,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -27,7 +28,8 @@ library.add(
    faExternalLinkAlt,
    faDownload,
    faEnvelope,
-   faInfo
+   faInfo,
+   faEllipsisH
 );
 
 function App() {
@@ -36,10 +38,8 @@ function App() {
    function changeCursorActive(e) {
       if (e.type === "mouseenter") {
          setCursorActive(true);
-         console.log("pulse");
       } else {
          setCursorActive(false);
-         console.log("stop");
       }
    }
 

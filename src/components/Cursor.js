@@ -6,6 +6,7 @@ import { motion, useMotionValue } from "framer-motion";
 function Cursor({ cursorActive }) {
    const positionX = useMotionValue(0);
    const positionY = useMotionValue(0);
+   const [hideCursor, setHideCursor] = useState(false);
 
    useEffect(() => {
       const moveCursor = (e) => {
@@ -13,16 +14,29 @@ function Cursor({ cursorActive }) {
          positionY.set(e.clientY - 5);
       };
 
-      window.addEventListener("mousemove", moveCursor);
+      const enterCursor = () => {
+         setHideCursor(false);
+      };
+
+      const leaveCursor = () => {
+         setHideCursor(true);
+      };
+
+      document.addEventListener("mousemove", moveCursor);
+      document.addEventListener("mouseenter", enterCursor);
+      document.addEventListener("mouseleave", leaveCursor);
+
       return () => {
-         window.removeEventListener("mousemove", moveCursor);
+         document.removeEventListener("mousemove", moveCursor);
+         document.removeEventListener("mouseenter", enterCursor);
+         document.removeEventListener("mouseleave", leaveCursor);
       };
    }, []);
 
    return (
       <div>
          <motion.div
-            className="cursor"
+            className={`cursor ${hideCursor ? "no-display" : null}`}
             style={{
                translateX: positionX,
                translateY: positionY,

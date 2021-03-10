@@ -6,37 +6,43 @@
    flex-direction: column;
    right: 0;
    width: 6vw;
+}
 
-   .orange-dot {
-      @include orange-dot(15rem);
-   }
+.orange-dot {
+   @include orange-dot(15rem);
+}
 
-   .page-nav {
-      width: 20%;
+.page-nav {
+   width: 20%;
 
-      li {
-         border-bottom: 2rem solid $green-blue;
+   li {
+      border-bottom: 2rem solid $green-blue;
+
+      a {
+         @include flex-container(center, center);
+         position: relative;
+         height: 35rem;
+         width: 100%;
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+      }
+
+      h6 {
+         font-size: 12rem;
+      }
+
+      &:hover {
+         border-bottom: 2rem solid $bright-orange;
 
          a {
-            @include flex-container(center, center);
-            position: relative;
-            height: 35rem;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-         }
-
-         h6 {
-            font-size: 12rem;
-         }
-
-         &:hover {
-            border-bottom: 2rem solid $bright-orange;
-
-            a {
-               opacity: 1;
-            }
+            opacity: 1;
          }
       }
+   }
+}
+
+@media (max-width: 540px) {
+   #nav-side-bar {
+      display: none;
    }
 }

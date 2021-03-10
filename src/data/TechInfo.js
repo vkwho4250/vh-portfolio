@@ -16,11 +16,10 @@ const TechInfo = [
       projects: ["yahtzee", "rps"],
       svg: "javascript",
    },
-
    {
-      name: "Git | Github",
-      projects: [],
-      svg: "git",
+      name: "jQuery",
+      projects: ["rps"],
+      svg: "jquery",
    },
    {
       name: "Vue | Vuex",
@@ -33,26 +32,26 @@ const TechInfo = [
       svg: "react",
    },
    {
-      name: "jQuery",
-      projects: ["rps"],
-      svg: "jquery",
-   },
-   {
       name: "Sass",
       projects: ["portfolio"],
       svg: "sass",
    },
+
    {
-      name: "Bootstrap",
-      projects: [],
-      svg: "bootstrap",
+      name: "REST API",
+      projects: ["vue-bj"],
+      svg: "restapi",
    },
    {
       name: "Responsive Design",
       projects: [],
       svg: "responsive-design",
    },
-
+   {
+      name: "Git | Github",
+      projects: [],
+      svg: "git",
+   },
    {
       name: "Node.js",
       projects: ["vue-bj"],
@@ -90,3 +89,6 @@ const TechInfo = [
 ];
 
 export default TechInfo;
+
+// Simple Icons
+//Iconify
