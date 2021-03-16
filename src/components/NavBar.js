@@ -43,7 +43,7 @@ function NavBar({ changeCursorActive }) {
                onMouseEnter={changeCursorActive}
                onMouseLeave={changeCursorActive}
             >
-               <ResumeBtn />
+               <ResumeBtn className="resume-btn" />
             </li>
          </ul>
          <div className="menu" onClick={handleMenu}>

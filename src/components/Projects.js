@@ -25,7 +25,7 @@ function Projects({ changeCursorActive }) {
    return (
       <div id="projects-page" className="page">
          <h1 className="page-title">
-            <span>Projects</span>
+            <span>Featured Projects</span>
          </h1>
          <div className="projects-container">
             <div className="nav-links">

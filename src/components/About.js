@@ -50,18 +50,33 @@ function About({ changeCursorActive }) {
                      My career started in a global risk consulting firm where I
                      worked in a fast-paced environment managing multiple client
                      expectations and deadlines. I have strong problem-solving
-                     and interpersonal skills with applied experience on
-                     enhancing process efficiency and usability.
+                     and interpersonal skills with applied experience using data
+                     software to enhance process efficiency and usability .
                   </p>
                   <p>
                      I pride myself on being unafraid to dig deep and
                      presevering when faced with a new challenge. Combining my
                      technical foundation and unique experiences, I choose
                      clean, quality code as my weapon of choice to solve
-                     problems, innovate and make an impact.
+                     problems, innovate and get things done!
                   </p>
                </div>
-
+               <div className="skills">
+                  <h5>My Toolkit</h5>
+                  <div className="tech-display">
+                     {TechInfo.map((tech, index) => {
+                        return (
+                           <Tech
+                              key={index}
+                              tech={tech}
+                              techInFocus={techInFocus}
+                              changeTechInFocus={changeTechInFocus}
+                              changeCursorActive={changeCursorActive}
+                           />
+                        );
+                     })}
+                  </div>
+               </div>
                <div className="extras">
                   <h5>Also a huge fan of</h5>
                   <ul>
@@ -84,22 +99,6 @@ function About({ changeCursorActive }) {
                         </p>
                      </li>
                   </ul>
-               </div>
-               <div className="skills">
-                  <h5>My Toolkit</h5>
-                  <div className="tech-display">
-                     {TechInfo.map((tech, index) => {
-                        return (
-                           <Tech
-                              key={index}
-                              tech={tech}
-                              techInFocus={techInFocus}
-                              changeTechInFocus={changeTechInFocus}
-                              changeCursorActive={changeCursorActive}
-                           />
-                        );
-                     })}
-                  </div>
                </div>
             </div>
          </div>

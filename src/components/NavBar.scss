@@ -8,7 +8,8 @@ nav {
    width: 100vw;
    @include flex-container(space-between, center);
    text-transform: uppercase;
-   background: linear-gradient($soft-white, transparent);
+   background: rgba($green-blue, 0.9);
+   box-shadow: 0 0 5rem -1rem rgba($green-blue, 0.5);
 }
 .logo {
    height: 15rem;
@@ -16,13 +17,21 @@ nav {
 
 .page-nav-links {
    display: flex;
-   width: 50vw;
+   width: 35vw;
 
    li {
       @include flex-container(center, center);
 
       height: 25rem;
       margin: 0 15rem;
+
+      a {
+         color: white;
+      }
+   }
+
+   .resume-btn {
+      background: darken($green-blue, 10%);
    }
 }
 

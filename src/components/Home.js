@@ -20,9 +20,8 @@ function Home({ changeCursorActive }) {
 
    return (
       <div id="home-page" className="home page">
-         {/* == ICE-CITY SVG == */}
          <motion.div
-            className="bg-image city-container"
+            className="vector-image city-container"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 3, ease: "easeOut", delay: 1 }}
@@ -44,9 +43,9 @@ function Home({ changeCursorActive }) {
             </div>
          </motion.div>
          <motion.div
-            className="bg-image sun-container"
+            className="vector-image sun-container"
             initial={{ rotate: 90, opacity: 0 }}
-            animate={{ rotate: -340, opacity: 1 }}
+            animate={{ rotate: -345, opacity: 1 }}
             transition={{ duration: 3, ease: "easeOut" }}
          >
             <div className="sun"></div>
@@ -113,8 +112,7 @@ function Home({ changeCursorActive }) {
                   >
                      <p>
                         With a passion for creative solutions, I'm using code to
-                        create experiences that resolve, enhance and delight, no
-                        matter the challenge.
+                        create experiences that resolve, enhance and delight!
                      </p>
                   </motion.div>
 
