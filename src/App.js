@@ -19,6 +19,9 @@ import {
    faDownload,
    faInfo,
    faEllipsisH,
+   faHandSpock,
+   faLaptopCode,
+   faPeopleArrows,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -29,7 +32,10 @@ library.add(
    faDownload,
    faEnvelope,
    faInfo,
-   faEllipsisH
+   faEllipsisH,
+   faHandSpock,
+   faLaptopCode,
+   faPeopleArrows
 );
 
 function App() {

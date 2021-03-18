@@ -17,7 +17,6 @@ nav {
 
 .page-nav-links {
    display: flex;
-   width: 35vw;
 
    li {
       @include flex-container(center, center);
@@ -46,8 +45,6 @@ h6 {
 @media (max-width: 540px) {
    nav {
       position: fixed;
-      background: $soft-white;
-      box-shadow: 0 0 5rem -1rem rgba($green-blue, 0.5);
    }
 
    .page-nav-links {
@@ -55,10 +52,11 @@ h6 {
       top: -300rem;
       left: 0;
       flex-direction: column;
-      background: $soft-white;
       width: 100%;
       opacity: 0;
       transition: all 1s;
+      background: rgba($green-blue,0.85);
+
 
       li {
          margin: 0;
@@ -74,9 +72,13 @@ h6 {
       @include flex-container(center, center);
       height: 100%;
       width: 30rem;
-
+      
       .menu-btn {
          position: absolute;
+      }
+
+      .icon {
+         color: $soft-white;
       }
    }
 }
