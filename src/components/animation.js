@@ -28,8 +28,8 @@ const grow = {
       transition: { duration: 0.2, ease: "easeOut" },
    },
    active: {
-      scale: 2,
-      opacity: 0.5,
+      scale: 4,
+      opacity: 0.2,
       transition: { duration: 0.2, ease: "easeOut" },
    },
 };

@@ -124,6 +124,7 @@ function ProjectPanel({
                      </div>
                   </div>
                   <p
+                     className="learn-more"
                      onClick={handleDetails}
                      onMouseEnter={changeCursorActive}
                      onMouseLeave={changeCursorActive}

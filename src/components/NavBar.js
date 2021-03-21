@@ -8,12 +8,11 @@ import "./NavBar.scss";
 import { ReactComponent as Logo } from "../assets/SVG/logo.svg";
 
 function NavBar({ changeCursorActive }) {
-   const pages = ["about", "projects", "contact"];
+   const pages = ["home", "about", "projects", "contact"];
    const [openMenu, setOpenMenu] = useState(false);
 
    function handleMenu() {
       setOpenMenu(!openMenu);
-      console.log("click");
    }
 
    return (
@@ -46,7 +45,12 @@ function NavBar({ changeCursorActive }) {
                <ResumeBtn className="resume-btn" />
             </li>
          </ul>
-         <div className="menu" onClick={handleMenu}>
+         <div
+            className="menu"
+            onClick={handleMenu}
+            onMouseEnter={changeCursorActive}
+            onMouseLeave={changeCursorActive}
+         >
             <motion.div
                className="menu-btn"
                initial={{ rotate: 0 }}

@@ -5,11 +5,9 @@ nav {
    z-index: 99;
    height: 5vh;
    padding: 0 4vw;
-   width: 100vw;
    @include flex-container(space-between, center);
    text-transform: uppercase;
    background: rgba($green-blue, 0.9);
-   box-shadow: 0 0 5rem -1rem rgba($green-blue, 0.5);
 }
 .logo {
    height: 15rem;
@@ -23,6 +21,10 @@ nav {
 
       height: 25rem;
       margin: 0 15rem;
+
+      &:hover {
+         text-decoration: underline;
+      }
 
       a {
          color: white;
@@ -55,8 +57,7 @@ h6 {
       width: 100%;
       opacity: 0;
       transition: all 1s;
-      background: rgba($green-blue,0.85);
-
+      background: rgba($green-blue, 0.85);
 
       li {
          margin: 0;
@@ -72,7 +73,7 @@ h6 {
       @include flex-container(center, center);
       height: 100%;
       width: 30rem;
-      
+
       .menu-btn {
          position: absolute;
       }
