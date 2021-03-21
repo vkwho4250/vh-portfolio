@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./App.scss";
 
-import Projects from "./components/Projects";
-import NavBar from "./components/NavBar";
-import About from "./components/About";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import NavSideBar from "./components/NavSideBar/NavSideBar";
 import Cursor from "./components/Cursor";
+import NavBar from "./components/NavBar";
+import NavSideBar from "./components/NavSideBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -17,7 +17,6 @@ import {
    faChevronUp,
    faEnvelope,
    faDownload,
-   faInfo,
    faEllipsisH,
    faHandSpock,
    faLaptopCode,
@@ -31,7 +30,6 @@ library.add(
    faExternalLinkAlt,
    faDownload,
    faEnvelope,
-   faInfo,
    faEllipsisH,
    faHandSpock,
    faLaptopCode,

@@ -1,7 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "./SocialsBar.scss";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SocialsBar({ changeCursorActive }) {
    return (

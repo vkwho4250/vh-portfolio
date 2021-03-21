@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 function ResumeBtn() {
    const [showDownload, setShowDownload] = useState(false);
 
-   function handleChange(e) {
+   const handleChange = (e) => {
       if (e.type === "mouseenter") {
          setShowDownload(true);
       } else {
          setShowDownload(false);
       }
-   }
+   };
 
    return (
       <div

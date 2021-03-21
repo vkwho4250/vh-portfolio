@@ -107,27 +107,6 @@ p {
    }
 }
 
-.App {
-   width: 100vw;
-   height: 100vh;
-}
-
-.page-container {
-   display: flex;
-   width: 400vw;
-}
-
-.page {
-   width: 100vw;
-   min-height: 100vh;
-   margin: 5vh 0;
-   // border: 1rem solid red;
-}
-
-.title {
-   padding-bottom: 5vh;
-}
-
 svg.icon {
    color: $green-blue;
 }

@@ -6,169 +6,165 @@
    @include flex-container(center, center);
    position: relative;
    overflow: hidden;
+}
 
-   span,
-   h3,
-   h6 {
-      color: darken($green-blue, 20%);
+//  === TITLE TEXT =====
+
+.text-container {
+   position: relative;
+   z-index: 5;
+   @include flex-container(center, center);
+   height: 100vh;
+
+   h1 {
+      font-weight: 500;
+      color: $green-blue;
+   }
+
+   h5 {
+      color: $text-color;
+   }
+
+   span {
+      color: darken($green-blue, 10%);
    }
 }
 
-   .vector-image {
+.main-text {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   position: relative;
+   row-gap: 3vh;
+
+   height: 75vh;
+   width: 50vw;
+}
+
+.border {
+   position: relative;
+   grid-area: 1 / 1 / 2 / 2;
+   width: 100%;
+   border-right: 2rem solid rgba(lighten($green-blue, 30%), 0.5);
+}
+
+.intro-headers {
+   grid-area: 1 / 1 / 2 / 2;
+   padding: 0 3vw 0 0;
+   text-align: right;
+}
+
+.right-header {
+   grid-area: 1 / 2 / 2 / 3;
+   position: relative;
+   padding: 10vh 0 0 3vw;
+
+   h2:last-child {
+      @include flex-container(flex-start, baseline);
+   }
+
+   .period {
+      width: 0.5vw;
+      height: 0.5vw;
+      margin-left: 4rem;
+      border-radius: 50%;
+      background: $bright-orange;
+   }
+}
+
+.blurb {
+   grid-area: 2 / 1 / 3 / 3;
+   @include flex-container(center, center);
+   text-align: center;
+
+   p {
+      font-size: calc(max(1.5vw, 16rem));
+      color: darken($text-color, 20%);
+   }
+}
+
+// == PAGE NAVIGATION BUTTONS ==
+
+.nav-page-container {
+   grid-area: 3 / 1 / 4 / 3;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100rem, 1fr));
+   grid-gap: 2vw;
+}
+
+// == BACKGROUND DISPLAY ==
+
+.bg-fade {
+   position: absolute;
+   top: 48%;
+   height: 100%;
+   width: 100%;
+   bottom: 0;
+
+   background: linear-gradient(transparent, rgba($soft-white, 0.8) 20%);
+}
+
+.vector-image {
+   position: absolute;
+   @include flex-container(center, center);
+}
+
+.sun-container {
+   position: absolute;
+   top: 10vh;
+   height: 80vw;
+   max-height: 80vh;
+   z-index: 5;
+
+   .sun {
       position: absolute;
-      @include flex-container(center, center);
+      top: 0;
+      @include orange-dot(calc(max(3.5vw, 40rem)));
    }
+}
 
-   .sun-container {
-      position: absolute;
-      top: 10vh;
-      height: 80vw;
-      max-height: 80vh;
-      z-index: 5;
+.city-container {
+   grid-area: 2 / 1 / 4 / 2;
+   padding: 5vh 0 0 0;
+   z-index: -1;
+   height: 100%;
+   width: 100%;
+}
 
-      .sun {
-         position: absolute;
-         top: 0vh;
-         @include orange-dot(calc(max(3.5vw, 40rem)));
-      }
-   }
+.ice-city-container {
+   position: absolute;
+   left: -10vw;
+   height: 100vh;
+   width: 40vw;
+   min-width: 300rem;
 
-//  === TITLE TEXT ===== 
+   background-size: cover;
+   background: linear-gradient(
+         -0.42turn,
+         $sun-orange 25%,
+         $warm-pink 35%,
+         $ice-blue 40%,
+         darken($water-blue, 20%) 50%
+      )
+      no-repeat;
 
-   .text-container {
-      position: relative;
-      z-index: 5;
-      @include flex-container(center, center);
-      height: 100vh;
+   mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
+}
 
-      h1 {
-         font-weight: 500;
-         color: $green-blue;
-      }
-
-      h5 {
-         color: $text-color;
-      }
-
-      span {
-         color: darken($green-blue, 10%);
-      }
-   }
-
-   
-   .bg-fade {
-      position:absolute;
-      top: 48%;
-      height: 100%;
-      width: 100%;
-      bottom: 0;
-
-      background: linear-gradient(transparent, rgba($soft-white, 0.8) 20%);
-   }
-
-   .main-text {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      position: relative;
-      row-gap: 3vh;
-
-      height: 75vh;
-      width: 50vw;
-   }
-
-   .border {
-      position: relative;
-      grid-area: 1 / 1 / 2 / 2;
-      width: 100%;
-      border-right: 2rem solid rgba(lighten($green-blue, 30%),0.5);
-   }
-
-   .intro-headers {
-      grid-area: 1 / 1 / 2 / 2;
-      padding: 0 3vw 0 0;
-      text-align: right;
-   }
-
-   .right-header{
-      grid-area: 1 / 2 / 2 / 3;
-      position: relative;
-      padding: 10vh 0 0 3vw;
-
-      h2:last-child {
-         @include flex-container(flex-start, baseline);
-      }
-
-      .period {
-         width: 0.5vw;
-         height: 0.5vw;
-         margin-left: 4rem;
-         border-radius: 50%;
-         background: $bright-orange;
-      }
-   }
-
-   .blurb {
-      grid-area: 2 / 1 / 3 / 3;
-      @include flex-container(center, center);
-      text-align: center;
-
-      p {
-         font-size: calc(max(1.5vw, 16rem));
-         color: darken($text-color, 20%);
-      }
-   }
-
-   .city-container {
-      grid-area: 2 / 1 / 4 / 2;
-      padding: 5vh 0 0 0;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-   }
-
-   .ice-city-container {
-      position: absolute;
-      left: -10vw;
-      height: 100vh;
-      width: 40vw;
-      min-width: 300rem;
-
-      background-size: cover;
-      background: linear-gradient(
-            -0.42turn,
-            $sun-orange 25%,
-            $warm-pink 35%,
-            $ice-blue 40%,
-            darken($water-blue, 20%) 50%
-         )
-         no-repeat;
-
-      mask: url("../assets/SVG/iceberg-up.svg") no-repeat;
-   } 
-
-   .nav-page-container {
-      grid-area: 3 / 1 / 4 / 3;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100rem, 1fr));
-      grid-gap: 2vw;
-   }
-
-
+// == TABLET / MID-SIZE DISPLAY ==
 
 @media (max-width: 923px) {
-
    .city-container {
-      grid-area: 3 / 1 / 4 / 2; 
+      grid-area: 3 / 1 / 4 / 2;
    }
 
    .nav-page-container {
       display: block;
    }
-
 }
 
-@media (max-width: 540px) {
+// == MOBILE DISPLAY ==
 
+@media (max-width: 540px) {
    .city-container {
       top: 70vh;
    }
@@ -180,30 +176,27 @@
       opacity: 0.7;
    }
 
-   .sun-container, .border, .bg-fade {
+   .sun-container,
+   .border,
+   .bg-fade {
       display: none;
    }
 
    .main-text {
       display: inline-block;
 
-      .intro-headers{
+      .intro-headers {
          text-align: center;
          padding: 0;
       }
 
-      .right-header{
+      .right-header {
          text-align: center;
          padding: 2vh 0;
 
          h2:last-child {
             justify-content: center;
-
          }
       }
-
-
-
    }
-
 }

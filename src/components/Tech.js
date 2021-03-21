@@ -5,23 +5,19 @@ import { motion } from "framer-motion";
 
 function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
    const [techProjects, setTechProjects] = useState([]);
-   const [showProjects, setShowProjects] = useState(false);
 
+   // retrieve all tech and project links
    useEffect(() => {
       getTechProjects();
    }, []);
 
-   useEffect(() => {
-      if (techInFocus !== tech.name) {
-         setShowProjects(false);
-      }
-   }, [techInFocus]);
-
-   function getTechProjects() {
+   // display projects that focuses on this tech
+   const getTechProjects = () => {
       const techProjects = ProjectInfo.filter((project) =>
          tech.projects.includes(project.folder)
       );
 
+      // set reference to project page
       if (tech.projects.includes("portfolio")) {
          techProjects.push({
             title: "Portfolio",
@@ -29,12 +25,15 @@ function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
          });
       }
       setTechProjects(techProjects);
-   }
+   };
 
-   function handleDisplay() {
-      changeTechInFocus(tech.name);
-      setShowProjects(!showProjects);
-   }
+   const handleDisplay = () => {
+      if (tech.projects.length !== 0) {
+         changeTechInFocus(tech.name);
+      } else {
+         changeTechInFocus(null);
+      }
+   };
 
    return (
       <div
@@ -48,7 +47,7 @@ function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
             className="initial-display content"
             initial={{ y: 0 }}
             animate={
-               showProjects && tech.projects.length !== 0
+               techInFocus === tech.name && tech.projects.length !== 0
                   ? { y: -60 }
                   : { y: 0 }
             }
@@ -65,8 +64,9 @@ function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
                tech.projects.length !== 0 ? "projects" : ""
             }`}
             initial={{ y: 0 }}
-            animate={showProjects ? { y: -60 } : { y: 0 }}
+            animate={techInFocus === tech.name ? { y: -60 } : { y: 0 }}
             transition={{ duration: 0.4, ease: "easeIn" }}
+            onClick={handleDisplay}
          >
             {techProjects.map((project, index) => {
                return (

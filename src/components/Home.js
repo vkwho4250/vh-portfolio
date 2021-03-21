@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import "./Home.scss";
 import Animations from "./animation";
-import { motion, useMotionValue } from "framer-motion";
 import NavBtn from "./NavBtn";
 
-import "./Home.scss";
+import { motion } from "framer-motion";
 
 function Home({ changeCursorActive }) {
    const navBtnText = [
@@ -14,7 +14,6 @@ function Home({ changeCursorActive }) {
 
    return (
       <div id="home-page" className="home page">
-         <div className="water"></div>
          <motion.div
             className="vector-image sun-container"
             initial={{ rotate: 90, opacity: 0 }}
@@ -25,7 +24,6 @@ function Home({ changeCursorActive }) {
          </motion.div>
          <div className="text-container">
             <div className="bg-fade"></div>
-
             <div className="main-text">
                <motion.div
                   className="border"

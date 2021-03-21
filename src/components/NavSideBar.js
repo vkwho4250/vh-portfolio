@@ -1,8 +1,8 @@
 import React from "react";
-import Animations from "../animation";
-import { motion } from "framer-motion";
-
 import "./NavSideBar.scss";
+import Animations from "./animation";
+
+import { motion } from "framer-motion";
 
 function NavSideBar({ changeCursorActive }) {
    const navigation = ["home", "about", "projects", "contact"];

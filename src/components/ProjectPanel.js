@@ -27,12 +27,11 @@ function ProjectPanel({
             break;
       }
 
+      // allows expand/collapse of *all* panel details even if some are already open/close
       setAllDetails("");
    }, [allDetails]);
 
-   function handleDetails() {
-      setShowDetails(!showDetails);
-   }
+   const handleDetails = () => setShowDetails(!showDetails);
 
    return (
       <div id={project.folder} className="project-panel">

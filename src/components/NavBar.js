@@ -1,19 +1,17 @@
 import React, { useState } from "react";
+import "./NavBar.scss";
 import Animations from "./animation";
 import ResumeBtn from "./ResumeBtn";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
-import "./NavBar.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactComponent as Logo } from "../assets/SVG/logo.svg";
+import { motion } from "framer-motion";
 
 function NavBar({ changeCursorActive }) {
    const pages = ["home", "about", "projects", "contact"];
    const [openMenu, setOpenMenu] = useState(false);
 
-   function handleMenu() {
-      setOpenMenu(!openMenu);
-   }
+   const handleMenu = () => setOpenMenu(!openMenu);
 
    return (
       <motion.nav

@@ -79,6 +79,8 @@
    }
 }
 
+// == TABLET / MID-SIZE DISPLAY ==
+
 @media (max-width: 923px) {
    .skills {
       grid-area: 2 / 2 / 3 / 4;
@@ -88,6 +90,8 @@
       grid-area: 3 / 2 / 4 / 4;
    }
 }
+
+// == MOBILE DISPLAY ==
 
 @media (max-width: 540px) {
    .main-content {

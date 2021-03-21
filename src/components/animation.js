@@ -29,7 +29,7 @@ const grow = {
    },
    active: {
       scale: 4,
-      opacity: 0.2,
+      opacity: 0.3,
       transition: { duration: 0.2, ease: "easeOut" },
    },
 };

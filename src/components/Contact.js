@@ -17,7 +17,7 @@ function Contact({ changeCursorActive }) {
                      I'd love an opportunity to speak with you and hear about
                      your journey as well. Anything from experiences to your
                      latest milestone (maybe it's resisting the bag of chips
-                     that's been eyeing you the whole day, who knows?) - I'm all
+                     you've been eyeing the whole day, who knows?) - I'm all
                      ears.
                   </h3>
                </div>

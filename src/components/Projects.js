@@ -14,13 +14,8 @@ function Projects({ changeCursorActive }) {
 
    const [allDetails, setAllDetails] = useState("");
 
-   function openAllDetails() {
-      setAllDetails("expand");
-   }
-
-   function closeAllDetails() {
-      setAllDetails("collapse");
-   }
+   const openAllDetails = () => setAllDetails("expand");
+   const closeAllDetails = () => setAllDetails("collapse");
 
    return (
       <div id="projects-page" className="page">
