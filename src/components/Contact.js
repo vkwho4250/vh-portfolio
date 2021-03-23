@@ -52,7 +52,7 @@ function Contact({ changeCursorActive }) {
                data-netlify="true"
                // action="/#contact-page/?success=true"
             >
-               <input type="hidden" name="form-hidden" value="conact-form" />
+               <input type="hidden" name="form-name" value="contact-form" />
                <input
                   type="text"
                   id="name"
