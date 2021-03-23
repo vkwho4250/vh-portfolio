@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Contact.scss";
 
 import SocialsBar from "./SocialsBar";
 
 function Contact({ changeCursorActive }) {
+   const [successMsg, setSuccessMsg] = useState(false);
+
+   useEffect(() => {
+      if (window.location.search.includes("success=true")) {
+         setSuccessMsg(true);
+      }
+   }, []);
+
    const submitForm = () => {};
 
    return (
@@ -40,7 +48,14 @@ function Contact({ changeCursorActive }) {
                </h3>
             </div>
 
-            <form onSubmit={submitForm}>
+            <form
+               onSubmit={submitForm}
+               name="contact-form"
+               method="POST"
+               data-netlify="true"
+               action="/#contact-page/?success=true"
+            >
+               <input type="hidden" name="form-hidden" value="conact-form" />
                <input
                   type="text"
                   id="name"
@@ -49,7 +64,7 @@ function Contact({ changeCursorActive }) {
                   placeholder="Name"
                   onMouseEnter={changeCursorActive}
                   onMouseLeave={changeCursorActive}
-               ></input>
+               />
 
                <input
                   type="email"
@@ -58,7 +73,7 @@ function Contact({ changeCursorActive }) {
                   placeholder="Email"
                   onMouseEnter={changeCursorActive}
                   onMouseLeave={changeCursorActive}
-               ></input>
+               />
 
                <textarea
                   name="message"
@@ -68,9 +83,21 @@ function Contact({ changeCursorActive }) {
                   placeholder="Message"
                   onMouseEnter={changeCursorActive}
                   onMouseLeave={changeCursorActive}
-               ></textarea>
+               />
 
                <button type="submit">On your mark, get set, let's chat!</button>
+               <div
+                  className={`success-message ${
+                     successMsg ? null : "no-display"
+                  }`}
+               >
+                  <h2>
+                     <span>Message sent!</span>
+                  </h2>
+                  <h3>
+                     <span>I look forward to connecting with you!</span>
+                  </h3>
+               </div>
             </form>
          </div>
          <div className="ice-city-container"></div>

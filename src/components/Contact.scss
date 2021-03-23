@@ -65,12 +65,14 @@
    }
 
    form {
+      @include flex-container(flex-start, center);
+      flex-direction: column;
       width: calc(min(600rem, 80vw));
 
       textarea,
       input {
          width: 100%;
-         padding: 1vh;
+         padding: 1vh 0;
          font-family: inherit;
          font-size: 18rem;
          font-weight: 400;
@@ -92,7 +94,7 @@
          color: $soft-white;
          width: 70%;
          padding: 5rem;
-         margin: 2vh 20%;
+         margin: 3vh 0;
 
          &:hover {
             font-weight: 500;
