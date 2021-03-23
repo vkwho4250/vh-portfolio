@@ -4,6 +4,8 @@ import "./Contact.scss";
 import SocialsBar from "./SocialsBar";
 
 function Contact({ changeCursorActive }) {
+   const submitForm = () => {};
+
    return (
       <div id="contact-page" className="contact-page page">
          <div className="content">
@@ -38,7 +40,7 @@ function Contact({ changeCursorActive }) {
                </h3>
             </div>
 
-            <form>
+            <form onSubmit={submitForm}>
                <input
                   type="text"
                   id="name"

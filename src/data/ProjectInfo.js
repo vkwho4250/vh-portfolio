@@ -57,7 +57,7 @@ const reactBulletJournal = {
    tech: ["React", "Responsive Design"],
    screenshots: ["react-bj-1", "react-bj-2", "react-bj-3"],
    github: "https://github.com/vkwho4250/react-frontend-journal",
-   site: "",
+   site: "https://react-frontend-journal.netlify.app",
 };
 
 const rockPaperScissors = {
