@@ -12,8 +12,6 @@ function Contact({ changeCursorActive }) {
       }
    }, []);
 
-   const submitForm = () => {};
-
    return (
       <div id="contact-page" className="contact-page page">
          <div className="content">
@@ -49,11 +47,10 @@ function Contact({ changeCursorActive }) {
             </div>
 
             <form
-               onSubmit={submitForm}
                name="contact-form"
                method="POST"
                data-netlify="true"
-               action="/#contact-page/?success=true"
+               // action="/#contact-page/?success=true"
             >
                <input type="hidden" name="form-hidden" value="conact-form" />
                <input
