@@ -1,22 +1,3 @@
-// $main-blue: #0f2862;
-// $main-blue: #0e1e25;
-// $main-gray: #4f5f76;
-// $main-red: #e14658;
-
-// LIGHT THEME
-// $warm-gray: #cdcdcd;
-
-// DARK THEME
-// $muted-black: #0b0c10;
-// $dark-gray: #1f2833;
-// $light-gray: #c5c6c7;
-// $sharp-blue: #66fcf1;
-
-// $sunset: #985e6d;
-$stormy: #416a99;
-
-// ! being used;
-
 $ice-blue: #99d3df;
 $water-blue: #88bbd6;
 $bright-orange: #f0980f;
@@ -26,7 +7,8 @@ $soft-white: #fcfcfc;
 $dark-gray: #636368;
 $green-blue: #3e8491;
 
-$moon-yellow: #e2e4d8;
+$moon-gray: #dddcd8;
+$midnight-purple: #8082ac;
 $warm-pink: #c49cab;
 $sun-orange: #e7c3a4;
 $bg-color: $soft-white;
@@ -40,7 +22,6 @@ $header-color: $dark-gray;
    font-family: "Barlow Condensed", sans-serif;
    font-weight: 400;
    text-transform: uppercase;
-   // color: $header-color;
 }
 
 %selection-style {

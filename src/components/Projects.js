@@ -18,7 +18,7 @@ function Projects({ changeCursorActive }) {
    const closeAllDetails = () => setAllDetails("collapse");
 
    return (
-      <div id="projects-page" className="page">
+      <div id="projects-page">
          <h1 className="page-title">
             <span>Featured Projects</span>
          </h1>

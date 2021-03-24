@@ -7,9 +7,21 @@ import { motion } from "framer-motion";
 
 function Home({ changeCursorActive }) {
    const navBtnText = [
-      { text: "Learn More About Me", icon: "hand-spock", page: "about" },
-      { text: "View My Work", icon: "laptop-code", page: "projects" },
-      { text: "Let's Connect", icon: "people-arrows", page: "contact" },
+      {
+         text: "Learn More About Me",
+         icon: "hand-spock",
+         destination: "/#about-page",
+      },
+      {
+         text: "View My Work",
+         icon: "laptop-code",
+         destination: "/#projects-page",
+      },
+      {
+         text: "Let's Connect",
+         icon: "people-arrows",
+         destination: "/#contact-page",
+      },
    ];
 
    return (
@@ -91,7 +103,8 @@ function Home({ changeCursorActive }) {
                            <NavBtn
                               text={navPage.text}
                               icon={navPage.icon}
-                              page={navPage.page}
+                              destination={navPage.destination}
+                              target=""
                               changeCursorActive={changeCursorActive}
                            />
                         </motion.div>
