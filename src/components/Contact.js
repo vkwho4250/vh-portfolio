@@ -38,14 +38,6 @@ function Contact({ changeCursorActive }) {
                target="_blank"
                changeCursorActive={changeCursorActive}
             />
-            <NavBtn
-               className="nav-socials"
-               text="vkwho4250"
-               icon={["fab", "github"]}
-               destination="https://github.com/vkwho4250"
-               target="_blank"
-               changeCursorActive={changeCursorActive}
-            />
          </div>
          <div className="cityscape"></div>
       </div>
