@@ -160,7 +160,12 @@ function ProjectPanel({
             animate={showDetails ? "open" : "close"}
             className="secondary-panel"
          >
-            <div onClick={handleDetails} className="closeBtn">
+            <div
+               onClick={handleDetails}
+               className="closeBtn"
+               onMouseEnter={changeCursorActive}
+               onMouseLeave={changeCursorActive}
+            >
                <FontAwesomeIcon icon="chevron-up" className="icon" />
             </div>
 

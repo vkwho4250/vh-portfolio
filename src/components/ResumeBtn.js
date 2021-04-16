@@ -21,7 +21,7 @@ function ResumeBtn() {
          onMouseEnter={handleChange}
          onMouseLeave={handleChange}
       >
-         <a href="/assets/vhResume.pdf" target="_blank">
+         <a href="/assets/VictoriaHoResume.pdf" target="_blank">
             <motion.h6
                initial={{ y: 0 }}
                animate={showDownload ? { y: -25 } : { y: 0 }}

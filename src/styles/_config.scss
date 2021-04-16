@@ -54,14 +54,6 @@ $header-color: $dark-gray;
    }
 }
 
-@function set-header-color($bg-color) {
-   @if (lightness($color) > 70) {
-      @return $muted-black;
-   } @else {
-      @return $soft-white;
-   }
-}
-
 @mixin orange-dot($size) {
    width: $size;
    height: $size;

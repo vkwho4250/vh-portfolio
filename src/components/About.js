@@ -7,7 +7,7 @@ import ResumeBtn from "./ResumeBtn";
 import SocialsBar from "./SocialsBar";
 
 function About({ changeCursorActive }) {
-   const [techInFocus, setTechInFocus] = useState("");
+   const [techInFocus, setTechInFocus] = useState(null);
 
    const changeTechInFocus = (techName) => {
       if (typeof techName === "string") {
@@ -44,23 +44,23 @@ function About({ changeCursorActive }) {
                   <span>Hi, I'm Victoria! </span>
                </h2>
                <p>
-                  I'm a front-end developer based in Toronto and an advocate for{" "}
-                  <span>continuous learning</span>,{" "}
-                  <span>big picture thinking</span> and{" "}
-                  <span>smart solutions</span> in both life and work.
+                  I am a front-end developer based in Toronto with experience in{" "}
+                  <span>consulting</span> , working in{" "}
+                  <span>cross-functional teams</span> and exchanging complex
+                  technical problems for <span>actionable solutions</span>.
                </p>
                <p>
-                  My career started in a global risk consulting firm where I
-                  worked in a fast-paced environment managing multiple client
-                  expectations and deadlines. I have strong problem-solving and
-                  interpersonal skills with applied experience using data
-                  software to enhance process efficiency and usability .
+                  My experience at a global risk consulting firm means I’m
+                  familiar with <span>assessing client needs</span>,
+                  understanding <span>big picture goals</span> and how to
+                  achieve them using <span>analytics software</span> to
+                  systematically transform raw data into workable information.
                </p>
                <p>
                   I pride myself on being unafraid to dig deep and presevering
                   when faced with a new challenge. Combining my technical
                   foundation and unique experiences, I choose clean, quality
-                  code as my weapon of choice to solve problems, innovate and
+                  code as my weapon of choice to solve problems, be creative and
                   get things done!
                </p>
             </div>
