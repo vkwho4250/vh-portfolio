@@ -45,14 +45,14 @@ function About({ changeCursorActive }) {
                </h2>
                <p>
                   I am a front-end developer based in Toronto with experience in{" "}
-                  <span>consulting</span> , working in{" "}
+                  <span>consulting</span>, working in{" "}
                   <span>cross-functional teams</span> and exchanging complex
                   technical problems for <span>actionable solutions</span>.
                </p>
                <p>
                   My experience at a global risk consulting firm means I’m
                   familiar with <span>assessing client needs</span>,
-                  understanding <span>big picture goals</span> and how to
+                  understanding <span>big picture goals</span>, and how to
                   achieve them using <span>analytics software</span> to
                   systematically transform raw data into workable information.
                </p>
