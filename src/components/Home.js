@@ -66,7 +66,7 @@ function Home({ changeCursorActive }) {
                >
                   <h5>And I'm a</h5>
                   <h2>
-                     <span>Front-end Developer</span>
+                     <span>Web Developer</span>
                   </h2>
                   <h2>
                      <span>Problem-Solver &</span>

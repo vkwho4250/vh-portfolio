@@ -44,7 +44,7 @@ function About({ changeCursorActive }) {
                   <span>Hi, I'm Victoria! </span>
                </h2>
                <p>
-                  I am a front-end developer based in Toronto with experience in{" "}
+                  I am a web developer based in Toronto with experience in{" "}
                   <span>consulting</span>, working in{" "}
                   <span>cross-functional teams</span> and exchanging complex
                   technical problems for <span>actionable solutions</span>.
