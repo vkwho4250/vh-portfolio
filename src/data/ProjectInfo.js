@@ -60,6 +60,26 @@ const reactBulletJournal = {
    site: "https://react-frontend-journal.netlify.app",
 };
 
+const reactLandingPage = {
+   title: "React Landing Page",
+   folder: "react-lp-clone",
+   description: "A clone of an award-winning design landing page",
+   reasons: [
+      "aesthetically pleasing design that represents the modern landing page",
+      "trains my ability to recognize detail and create it from scratch",
+      "involves many reusable components perfect for React practice",
+   ],
+   achievements: [
+      "constructed replica of a website based off of professional design with no guidance",
+      "incorporated animation library into React that complement states and props",
+      "used Sass to improve structure, efficiency and reusability of styling code",
+   ],
+   tech: ["React", "Sass", "Framer-Motion", "Responsive Design"],
+   screenshots: ["react-lp-clone-1", "react-lp-clone-2", "react-lp-clone-3"],
+   github: "https://github.com/vkwho4250/react-lp-clone",
+   site: "https://react-lp-clone.netlify.app/",
+};
+
 const rockPaperScissors = {
    title: "Rock-Paper-Scissors",
    folder: "rps",
@@ -82,6 +102,7 @@ const ProjectInfo = [
    yahtzee,
    vueBulletJournal,
    reactBulletJournal,
+   reactLandingPage,
    rockPaperScissors,
 ];
 

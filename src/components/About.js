@@ -44,24 +44,41 @@ function About({ changeCursorActive }) {
                   <span>Hi, I'm Victoria! </span>
                </h2>
                <p>
-                  I am a web developer based in Toronto with experience in{" "}
-                  <span>consulting</span>, working in{" "}
-                  <span>cross-functional teams</span> and exchanging complex
-                  technical problems for <span>actionable solutions</span>.
+                  I am a self-driven web developer based in Toronto who excel in{" "}
+                  <span>team environments</span>, working{" "}
+                  <span>autonomously</span> and exchanging complex problems for{" "}
+                  <span>actionable solutions</span>.
                </p>
                <p>
-                  My experience at a global risk consulting firm means I’m
-                  familiar with <span>assessing client needs</span>,
-                  understanding <span>big picture goals</span>, and how to
-                  achieve them using <span>analytics software</span> to
-                  systematically transform raw data into workable information.
+                  I started out in risk consulting where I gained extensive
+                  practice <span>meeting client needs</span>, and learned that
+                  the <span>process is just as important as the results</span>.
+                  Regardless of setting, I'm a <span>problem-solver</span> and{" "}
+                  <span>creator</span> at heart, and I pride myself on being{" "}
+                  <span>unafraid to dig deep</span> and <span>presevering</span>{" "}
+                  when faced with new challenges.
                </p>
                <p>
-                  I pride myself on being unafraid to dig deep and presevering
-                  when faced with a new challenge. Combining my technical
-                  foundation and unique experiences, I choose clean, quality
-                  code as my weapon of choice to solve problems, be creative and
-                  get things done!
+                  I love that I can be <span>creative</span> and{" "}
+                  <span>forever curious</span> with web development while
+                  maintaining my innate <span>methodical personality</span>. I
+                  build <span>responsive</span> and <span>engaging</span>{" "}
+                  digital experiences with <span>quality, DRY code</span> and
+                  can't wait to hone in new techniques and knowledge to become a
+                  better developer.
+               </p>
+               <p>
+                  Combining my technical foundation and unique experiences, I
+                  want to <span>make an impact</span> with quality code as my
+                  weapon of choice.{" "}
+                  <a
+                     href="/#contact-page"
+                     onMouseEnter={changeCursorActive}
+                     onMouseLeave={changeCursorActive}
+                  >
+                     Let me know
+                  </a>{" "}
+                  how I can help you make a difference!
                </p>
             </div>
             <div className="skills">

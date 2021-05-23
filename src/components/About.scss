@@ -58,6 +58,11 @@
 
 .summary {
    grid-area: 1 / 2 / 2 / 4;
+
+   a {
+      color: $bright-orange;
+      font-weight: 500;
+   }
 }
 
 .extras {
