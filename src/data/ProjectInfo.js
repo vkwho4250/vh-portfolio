@@ -66,11 +66,11 @@ const reactLandingPage = {
    description: "A clone of an award-winning design landing page",
    reasons: [
       "aesthetically pleasing design that represents the modern landing page",
-      "trains my ability to recognize detail and create it from scratch",
-      "involves many reusable components perfect for React practice",
+      "trains my ability to recognize detail and problem solve to achieve it",
+      "involves many reusable components perfect for React environment",
    ],
    achievements: [
-      "constructed replica of a website based off of professional design with no guidance",
+      "to replicate modern and professional design components with no guidance",
       "incorporated animation library into React that complement states and props",
       "used Sass to improve structure, efficiency and reusability of styling code",
    ],
@@ -100,8 +100,8 @@ const rockPaperScissors = {
 
 const ProjectInfo = [
    yahtzee,
-   vueBulletJournal,
    reactLandingPage,
+   vueBulletJournal,
    reactBulletJournal,
    rockPaperScissors,
 ];

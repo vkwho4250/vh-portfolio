@@ -28,12 +28,12 @@ const TechInfo = [
    },
    {
       name: "React",
-      projects: ["portfolio", "react-bj"],
+      projects: ["portfolio", "react-lp-clone", "react-bj"],
       svg: "react",
    },
    {
       name: "Sass",
-      projects: ["portfolio"],
+      projects: ["portfolio", "react-lp-clone"],
       svg: "sass",
    },
 

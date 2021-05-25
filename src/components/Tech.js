@@ -48,7 +48,7 @@ function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
             initial={{ y: 0 }}
             animate={
                techInFocus === tech.name && tech.projects.length !== 0
-                  ? { y: -60 }
+                  ? { y: -80 }
                   : { y: 0 }
             }
             transition={{ duration: 0.4, ease: "easeIn" }}
@@ -64,7 +64,7 @@ function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
                tech.projects.length !== 0 ? "projects" : ""
             }`}
             initial={{ y: 0 }}
-            animate={techInFocus === tech.name ? { y: -60 } : { y: 0 }}
+            animate={techInFocus === tech.name ? { y: -80 } : { y: 0 }}
             transition={{ duration: 0.4, ease: "easeIn" }}
             onClick={handleDisplay}
          >

@@ -44,41 +44,33 @@ function About({ changeCursorActive }) {
                   <span>Hi, I'm Victoria! </span>
                </h2>
                <p>
-                  I am a self-driven web developer based in Toronto who excel in{" "}
+                  I am a web developer who excel in{" "}
                   <span>team environments</span>, working{" "}
                   <span>autonomously</span> and exchanging complex problems for{" "}
                   <span>actionable solutions</span>.
                </p>
                <p>
-                  I started out in risk consulting where I gained extensive
-                  practice <span>meeting client needs</span>, and learned that
-                  the <span>process is just as important as the results</span>.
-                  Regardless of setting, I'm a <span>problem-solver</span> and{" "}
-                  <span>creator</span> at heart, and I pride myself on being{" "}
+                  I started out in risk consulting where I had extensive
+                  practice <span>meeting client needs</span> by managing
+                  projects from <span>conception</span> to{" "}
+                  <span>implementation</span>. I'm a <span>problem-solver</span>{" "}
+                  and <span>self-starter</span> who prides herself on being{" "}
                   <span>unafraid to dig deep</span> and <span>presevering</span>{" "}
                   when faced with new challenges.
                </p>
                <p>
                   I love that I can be <span>creative</span> and{" "}
-                  <span>forever curious</span> with web development while
-                  maintaining my innate <span>methodical personality</span>. I
-                  build <span>responsive</span> and <span>engaging</span>{" "}
-                  digital experiences with <span>quality, DRY code</span> and
-                  can't wait to hone in new techniques and knowledge to become a
+                  <span>forever curious</span> with web development the same
+                  time I use my <span>methodical personality</span> to write{" "}
+                  <span>quality, DRY code</span>. Together, I build{" "}
+                  <span>responsive</span> and <span>engaging</span> digital
+                  experiences and am eager to continue learning to become a
                   better developer.
                </p>
                <p>
-                  Combining my technical foundation and unique experiences, I
-                  want to <span>make an impact</span> with quality code as my
-                  weapon of choice.{" "}
-                  <a
-                     href="/#contact-page"
-                     onMouseEnter={changeCursorActive}
-                     onMouseLeave={changeCursorActive}
-                  >
-                     Let me know
-                  </a>{" "}
-                  how I can help you make a difference!
+                  Ultimately, my passion lies in{" "}
+                  <span>bringing ideas to life</span> and I'm choosing quality
+                  code as my weapon of choice to resolve, create and delight!
                </p>
             </div>
             <div className="skills">
