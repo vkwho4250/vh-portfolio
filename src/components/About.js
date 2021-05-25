@@ -60,8 +60,8 @@ function About({ changeCursorActive }) {
                </p>
                <p>
                   I love that I can be <span>creative</span> and{" "}
-                  <span>forever curious</span> with web development the same
-                  time I use my <span>methodical personality</span> to write{" "}
+                  <span>forever curious</span> with web development while using
+                  my <span>methodical personality</span> to write{" "}
                   <span>quality, DRY code</span>. Together, I build{" "}
                   <span>responsive</span> and <span>engaging</span> digital
                   experiences and am eager to continue learning to become a
