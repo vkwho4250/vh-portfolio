@@ -8,6 +8,10 @@ nav {
    @include flex-container(space-between, center);
    text-transform: uppercase;
    background: rgba($green-blue, 0.9);
+
+   h6 {
+      font-size: 14rem;
+   }
 }
 
 .logo {
@@ -35,10 +39,6 @@ nav {
    .resume-btn {
       background: darken($green-blue, 10%);
    }
-}
-
-h6 {
-   font-size: 14rem;
 }
 
 .menu {
