@@ -44,33 +44,24 @@ function About({ changeCursorActive }) {
                   <span>Hi, I'm Victoria! </span>
                </h2>
                <p>
-                  I am a web developer who excel in{" "}
-                  <span>team environments</span>, working{" "}
-                  <span>autonomously</span> and exchanging complex problems for{" "}
-                  <span>actionable solutions</span>.
+                  I’m a self-motivated and avid learner who’s passionate about
+                  exchanging complex problems for actionable solutions. As a
+                  result of my work experiences, I excel in meeting project
+                  goals, contributing to collaborative teams, and being
+                  resourceful when faced with new challenges.
                </p>
                <p>
-                  I started out in risk consulting where I had extensive
-                  practice <span>meeting client needs</span> by managing
-                  projects from <span>conception</span> to{" "}
-                  <span>implementation</span>. I'm a <span>problem-solver</span>{" "}
-                  and <span>self-starter</span> who prides herself on being{" "}
-                  <span>unafraid to dig deep</span> and <span>presevering</span>{" "}
-                  when faced with new challenges.
+                  Being a web developer allows me to be creative and curious
+                  without compromising the inherent problem-solver in me. I love
+                  that there’s never a dead-end in web development and am eager
+                  to learn new and better ways to produce engaging and memorable
+                  digital experiences that consistently deliver.
                </p>
                <p>
-                  I love that I can be <span>creative</span> and{" "}
-                  <span>forever curious</span> with web development while using
-                  my <span>methodical personality</span> to write{" "}
-                  <span>quality, DRY code</span>. Together, I build{" "}
-                  <span>responsive</span> and <span>engaging</span> digital
-                  experiences and am eager to continue learning to become a
-                  better developer.
-               </p>
-               <p>
-                  Ultimately, my passion lies in{" "}
-                  <span>bringing ideas to life</span> and I'm choosing quality
-                  code as my weapon of choice to resolve, create and delight!
+                  I always strive to create accessible, intuitive applications
+                  supported by scalable and efficient code, and am eager to
+                  craft them amongst awesome people who share my enthusiasm in
+                  all things smart and creative!
                </p>
             </div>
             <div className="skills">
