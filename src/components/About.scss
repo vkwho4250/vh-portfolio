@@ -1,121 +1,121 @@
 @import "../styles/config";
 
 #about-page {
-   position: relative;
-   background: rgba(lighten($green-blue, 40%), 0.15);
-   padding: 5vh 16vw 5vh 8vw;
+  position: relative;
+  background: rgba(lighten($green-blue, 40%), 0.15);
+  padding: 5vh 16vw 5vh 8vw;
 
-   h5,
-   span {
-      color: $green-blue;
-   }
+  h5,
+  span {
+    color: $green-blue;
+  }
 
-   h2,
-   p,
-   h5 {
-      margin-bottom: 2vh;
-   }
+  h2,
+  p,
+  h5 {
+    margin-bottom: 2vh;
+  }
 
-   h2 {
-      letter-spacing: 1.5rem;
-   }
+  h2 {
+    letter-spacing: 1.5rem;
+  }
 }
 
 .title {
-   padding-bottom: 5vh;
+  padding-bottom: 5vh;
 }
 
 .main-content {
-   position: relative;
-   display: grid;
-   grid-template-columns: 1fr 2fr 2fr;
-   column-gap: 5vw;
-   row-gap: 2vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  column-gap: 5vw;
+  row-gap: 2vh;
 }
 
 .profile-container {
-   grid-area: 1 / 1 / 3 / 1;
-   @include flex-container(flex-start, center);
-   flex-direction: column;
+  grid-area: 1 / 1 / 3 / 1;
+  @include flex-container(flex-start, center);
+  flex-direction: column;
 
-   h5 {
-      text-align: center;
-   }
+  h5 {
+    text-align: center;
+  }
 
-   .profile-pic {
-      border-radius: 50%;
-      width: 14vw;
-      height: 14vw;
-      background: url("../assets/profile.jpg") no-repeat center;
-      background-size: 110%;
-      margin-bottom: 2vh;
-   }
+  .profile-pic {
+    border-radius: 50%;
+    width: 14vw;
+    height: 14vw;
+    background: url("../assets/profile.jpg") no-repeat center;
+    background-size: 110%;
+    margin-bottom: 2vh;
+  }
 
-   .resume-btn {
-      width: 120rem;
-   }
+  .resume-btn {
+    width: 120rem;
+  }
 }
 
 .summary {
-   grid-area: 1 / 2 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 4;
 
-   a {
-      color: $bright-orange;
-      font-weight: 500;
-   }
+  a {
+    color: $bright-orange;
+    font-weight: 500;
+  }
 }
 
 .extras {
-   ul {
-      padding-left: 2vw;
+  ul {
+    padding-left: 2vw;
 
-      li {
-         @extend %list-style;
-         margin-bottom: 0;
-      }
-   }
+    li {
+      @extend %list-style;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .skills {
-   .tech-display {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 85rem);
-      row-gap: 1vh;
-   }
+  .tech-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 85rem);
+    row-gap: 1vh;
+  }
 }
 
 // == TABLET / MID-SIZE DISPLAY ==
 
 @media (max-width: 923px) {
-   .skills {
-      grid-area: 2 / 2 / 3 / 4;
-   }
+  .skills {
+    grid-area: 2 / 2 / 3 / 4;
+  }
 
-   .extras {
-      grid-area: 3 / 2 / 4 / 4;
-   }
+  .extras {
+    grid-area: 3 / 2 / 4 / 4;
+  }
 }
 
 // == MOBILE DISPLAY ==
 
 @media (max-width: 540px) {
-   .main-content {
-      display: block;
-   }
+  .main-content {
+    display: block;
+  }
 
-   .profile-container {
-      flex-direction: row;
+  .profile-container {
+    flex-direction: row;
 
-      .profile-pic {
-         width: 30vw;
-         height: 30vw;
-         margin-right: 5vw;
-      }
-   }
+    .profile-pic {
+      width: 30vw;
+      height: 30vw;
+      margin-right: 5vw;
+    }
+  }
 
-   .summary,
-   .extras,
-   .skills {
-      margin: 2vh 0;
-   }
+  .summary,
+  .extras,
+  .skills {
+    margin: 2vh 0;
+  }
 }

@@ -1,240 +1,240 @@
 @import "../styles/config";
 
 .project-panel {
-   width: 100%;
-   font-style: italic;
+  width: 100%;
+  font-style: italic;
 }
 
 .main-panel {
-   margin-top: 20rem;
-   position: relative;
-   width: 100%;
-   height: fit-content;
-   min-height: 250rem;
-   display: grid;
-   grid-template-columns: 140rem 40rem 1fr;
+  margin-top: 20rem;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  min-height: 250rem;
+  display: grid;
+  grid-template-columns: 140rem 40rem 1fr;
 }
 
 .project-details {
-   h2 {
-      font-size: calc(max(3vw, 50rem));
-      letter-spacing: 2rem;
-      font-style: italic;
-   }
+  h2 {
+    font-size: calc(max(3vw, 50rem));
+    letter-spacing: 2rem;
+    font-style: italic;
+  }
 
-   .divider {
-      position: relative;
-      margin-top: 10rem;
-      border-top: 2rem solid $text-color;
-      width: 80%;
-      transform: skewY(-50deg);
-   }
+  .divider {
+    position: relative;
+    margin-top: 10rem;
+    border-top: 2rem solid $text-color;
+    width: 80%;
+    transform: skewY(-50deg);
+  }
 
-   ul {
-      position: relative;
-      top: 80rem;
-      left: 40rem;
-      transform: skewY(50deg);
-      height: 50%;
-   }
+  ul {
+    position: relative;
+    top: 80rem;
+    left: 40rem;
+    transform: skewY(50deg);
+    height: 50%;
+  }
 }
 
 .links {
-   padding-top: 14rem;
-   @include flex-container(flex-start, center);
-   flex-direction: column;
+  padding-top: 14rem;
+  @include flex-container(flex-start, center);
+  flex-direction: column;
 
-   .icon {
-      width: 20rem;
-      height: 20rem;
-      margin-bottom: 10rem;
+  .icon {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 10rem;
 
-      &:hover {
-         color: $bright-orange;
-      }
-   }
+    &:hover {
+      color: $bright-orange;
+    }
+  }
 
-   .ext-link {
-      transform: scale(0.8);
-   }
+  .ext-link {
+    transform: scale(0.8);
+  }
 }
 
 .project-desc {
-   position: relative;
-   width: 100%;
-   @include flex-container(flex-start, flex-start);
+  position: relative;
+  width: 100%;
+  @include flex-container(flex-start, flex-start);
 
-   .text {
-      width: 40%;
-      padding: 9rem;
-      color: $text-color;
+  .text {
+    width: 40%;
+    padding: 9rem;
+    color: $text-color;
 
-      .subheading {
-         font-size: calc(max(0.8vw, 2.2vh));
-         color: $green-blue;
-         margin: 10rem 0;
-      }
+    .subheading {
+      font-size: calc(max(0.8vw, 2.2vh));
+      color: $green-blue;
+      margin: 10rem 0;
+    }
 
-      h5 {
-         font-size: calc(max(1.5vw, 4vh));
-      }
-   }
+    h5 {
+      font-size: calc(max(1.5vw, 4vh));
+    }
 
-   .project-images {
-      position: relative;
-      height: fit-content;
-      width: 60%;
-      min-width: 200rem;
-      margin: 40rem 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .thought-process {
+      text-decoration: underline;
+    }
+  }
 
-      > div {
-         height: 100%;
-      }
-   }
+  .project-images {
+    position: relative;
+    height: fit-content;
+    width: 60%;
+    min-width: 200rem;
+    margin: 40rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-   img {
-      padding: 2.5%;
-      max-width: 100%;
-   }
-
-   .img-container {
-      @include flex-container(center, center);
-      background: rgba(darken($ice-gray, 10%), 0.3);
-      backdrop-filter: blur(5rem);
-   }
-
-   .back-images {
-      position: relative;
-      width: 100%;
+    > div {
       height: 100%;
+    }
+  }
 
-      @include flex-container(space-between, center);
+  img {
+    padding: 2.5%;
+    max-width: 100%;
+  }
 
-      .img-container {
-         height: auto;
-         width: 50%;
-      }
-   }
+  .img-container {
+    @include flex-container(center, center);
+    background: rgba(darken($ice-gray, 10%), 0.3);
+    backdrop-filter: blur(5rem);
+  }
 
-   .front-image {
-      position: absolute;
-      @include flex-container(center, center);
-      width: 60%;
+  .back-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
 
-      .img-container {
-         height: auto;
-      }
-   }
-}
+    @include flex-container(space-between, center);
 
-.learn-more:hover {
-   text-decoration: underline;
+    .img-container {
+      height: auto;
+      width: 50%;
+    }
+  }
+
+  .front-image {
+    position: absolute;
+    @include flex-container(center, center);
+    width: 60%;
+
+    .img-container {
+      height: auto;
+    }
+  }
 }
 
 .secondary-panel {
-   background: lighten($green-blue, 50%);
-   position: relative;
-   margin-left: 140rem;
-   padding: 2vh 2vw;
+  background: lighten($green-blue, 50%);
+  position: relative;
+  margin-left: 140rem;
+  padding: 2vh 2vw;
 
-   .closeBtn {
-      @include flex-container(center, flex-start);
-      position: absolute;
-      top: 0;
-      left: -40rem;
-      width: 40rem;
-      height: 50rem;
-      padding-top: 13rem;
-      background: lighten($green-blue, 30%);
-   }
+  .closeBtn {
+    @include flex-container(center, flex-start);
+    position: absolute;
+    top: 0;
+    left: -40rem;
+    width: 40rem;
+    height: 50rem;
+    padding-top: 13rem;
+    background: lighten($green-blue, 30%);
+  }
 
-   .notes-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250rem, 1fr));
-      column-gap: 30rem;
-      row-gap: 10rem;
-   }
+  .notes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250rem, 1fr));
+    column-gap: 30rem;
+    row-gap: 10rem;
+  }
 
-   > div {
-      position: relative;
-      color: darken($text-color, 20%);
+  > div {
+    position: relative;
+    color: darken($text-color, 20%);
 
-      ul {
-         margin: 1.5vh 0 0 17rem;
+    ul {
+      margin: 1.5vh 0 0 17rem;
 
-         li {
-            @extend %list-style;
-         }
+      li {
+        @extend %list-style;
       }
-   }
+    }
+  }
 
-   .next-steps {
-      @include flex-container(flex-start, center);
-      margin-top: 20rem;
+  .next-steps {
+    @include flex-container(flex-start, center);
+    margin-top: 20rem;
 
-      h6 {
-         margin-right: 30rem;
-         font-weight: 500;
-         color: darken($text-color, 50%);
+    h6 {
+      margin-right: 30rem;
+      font-weight: 500;
+      color: darken($text-color, 50%);
 
-         &:hover {
-            color: $bright-orange;
-         }
+      &:hover {
+        color: $bright-orange;
       }
-   }
+    }
+  }
 }
 
 .mobile {
-   display: none;
+  display: none;
 }
 
 // == MID-SIZE DISPLAY ==
 
 @media (max-width: 1200px) {
-   .project-desc {
-      display: block;
+  .project-desc {
+    display: block;
 
-      .text {
-         width: 100%;
-      }
+    .text {
+      width: 100%;
+    }
 
-      .project-images {
-         width: 80%;
-         margin: 5vh auto;
-      }
-   }
+    .project-images {
+      width: 80%;
+      margin: 5vh auto;
+    }
+  }
 
-   .secondary-panel {
-      margin-left: 40rem;
-   }
+  .secondary-panel {
+    margin-left: 40rem;
+  }
 }
 
 // == TABLET / MOBILE DISPLAY ==
 
 @media (max-width: 923px) {
-   .main-panel {
-      display: block;
-   }
+  .main-panel {
+    display: block;
+  }
 
-   .project-details,
-   .desktop {
-      display: none;
-   }
+  .project-details,
+  .desktop {
+    display: none;
+  }
 
-   .mobile {
-      display: inline-block;
+  .mobile {
+    display: inline-block;
 
-      .links {
-         flex-direction: row;
-         padding: 1vh 0;
-         width: auto;
+    .links {
+      flex-direction: row;
+      padding: 1vh 0;
+      width: auto;
 
-         a {
-            margin-right: 10rem;
-         }
+      a {
+        margin-right: 10rem;
       }
-   }
+    }
+  }
 }
