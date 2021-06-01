@@ -71,7 +71,7 @@ const reactLandingPage = {
   ],
   achievements: [
     "to replicate modern and professional design components with no guidance",
-    "incorporated animation library into React that complement states and props",
+    "incorporated animation library into React that utilizes states",
     "used Sass to improve structure, efficiency and reusability of styling code",
   ],
   tech: ["React", "Sass", "Framer-Motion", "Responsive Design"],
