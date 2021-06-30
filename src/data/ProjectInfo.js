@@ -102,7 +102,6 @@ const ProjectInfo = [
   yahtzee,
   vueBulletJournal,
   reactLandingPage,
-  reactBulletJournal,
   rockPaperScissors,
 ];
 
