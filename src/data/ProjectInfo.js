@@ -100,8 +100,8 @@ const rockPaperScissors = {
 
 const ProjectInfo = [
   yahtzee,
-  reactLandingPage,
   vueBulletJournal,
+  reactLandingPage,
   reactBulletJournal,
   rockPaperScissors,
 ];
