@@ -28,7 +28,7 @@
 .main-content {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 3fr 2fr;
   column-gap: 5vw;
   row-gap: 2vh;
 }
@@ -79,7 +79,7 @@
 .skills {
   .tech-display {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 85rem);
+    grid-template-columns: repeat(auto-fill, 100rem);
     row-gap: 1vh;
   }
 }

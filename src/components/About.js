@@ -101,7 +101,10 @@ function About({ changeCursorActive }) {
               </p>
             </li>
             <li>
-              <p>In-depth plot/character analysis on my favourite shows</p>
+              <p>
+                In-depth plot/character analysis on my favourite novels and
+                shows
+              </p>
             </li>
           </ul>
         </div>

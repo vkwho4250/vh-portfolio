@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ProjectPanel.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import Animations from "./animation";
+import Animations from "../animation";
 
 function ProjectPanel({
   project,

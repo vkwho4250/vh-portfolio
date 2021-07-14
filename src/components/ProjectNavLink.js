@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./ProjectNavLink.scss";
-import Animations from "./animation";
+import Animations from "../animation";
 import { motion } from "framer-motion";
 
 function ProjectNavLink({ project, index, changeCursorActive }) {

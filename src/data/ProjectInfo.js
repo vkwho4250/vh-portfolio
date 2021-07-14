@@ -40,6 +40,27 @@ const vueBulletJournal = {
   site: "https://vue-bullet-journal-vkwho.herokuapp.com/",
 };
 
+const reactEcommerceSite = {
+  title: "React E-commerce Site",
+  folder: "react-ecommerce",
+  description: "A modern multi-page e-commerce site",
+  reasons: [
+    "to further explore React hooks and associated libraries",
+    "an opportunity to to use React Context API for shared states",
+    "to create a seamless multi-page app that represents real commercial sites",
+  ],
+  achievements: [
+    "to utilize Context API as a transport mechanism (not manager) to make shared states accessible throughout the component tree",
+    "to implement react-router to easily traverse between pages",
+    "to effectively translate Figma design files to interactive site which balances design, functionality and responsiveness",
+  ],
+  tech: ["React", "Sass"],
+  screenshots: ["react-ecommerce-1", "react-ecommerce-3", "react-ecommerce-2"],
+  github: "https://github.com/vkwho4250/e-commerce-app",
+  site: "https://vkwho-react-ecommerce-app.netlify.app/",
+};
+
+// removed
 const reactBulletJournal = {
   title: "React Bullet Journal",
   folder: "react-bj",
@@ -61,7 +82,7 @@ const reactBulletJournal = {
 };
 
 const reactLandingPage = {
-  title: "React Landing Page (WIP)",
+  title: "React Landing Page",
   folder: "react-lp-clone",
   description: "A clone of an award-winning design landing page",
   reasons: [
@@ -71,8 +92,8 @@ const reactLandingPage = {
   ],
   achievements: [
     "to replicate modern and professional design components with no guidance",
-    "incorporated animation library into React that utilizes states",
-    "used Sass to improve structure, efficiency and reusability of styling code",
+    "to incorporate animation library into React that utilizes states",
+    "use Sass to improve structure, efficiency and reusability of styling code",
   ],
   tech: ["React", "Sass", "Framer-Motion", "Responsive Design"],
   screenshots: ["react-lp-clone-1", "react-lp-clone-2", "react-lp-clone-3"],
@@ -99,9 +120,11 @@ const rockPaperScissors = {
 };
 
 const ProjectInfo = [
-  yahtzee,
+  reactEcommerceSite,
   vueBulletJournal,
+  yahtzee,
   reactLandingPage,
+  reactBulletJournal,
   rockPaperScissors,
 ];
 
