@@ -60,7 +60,6 @@ const reactEcommerceSite = {
   site: "https://vkwho-react-ecommerce-app.netlify.app/",
 };
 
-// removed
 const reactBulletJournal = {
   title: "React Bullet Journal",
   folder: "react-bj",
