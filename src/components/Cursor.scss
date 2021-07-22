@@ -1,11 +1,11 @@
 @import "../styles/config";
 
 .cursor {
-   @include orange-dot(10rem);
-   position: fixed;
-   top: 0;
-   left: 0;
-   opacity: 0.7;
-   z-index: 999;
-   pointer-events: none;
+  @include orange-dot(10rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: 999;
+  pointer-events: none;
 }

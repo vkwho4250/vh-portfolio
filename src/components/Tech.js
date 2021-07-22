@@ -57,7 +57,9 @@ function Tech({ tech, techInFocus, changeTechInFocus, changeCursorActive }) {
           className="tech-icon"
           alt={tech.name}
         ></img>
-        <p>{tech.name}</p>
+        <p className={tech.projects.length !== 0 ? "emphasis" : null}>
+          {tech.name}
+        </p>
       </motion.div>
       <motion.div
         className={`content ${tech.projects.length !== 0 ? "projects" : ""}`}

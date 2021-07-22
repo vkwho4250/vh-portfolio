@@ -7,6 +7,26 @@ function Cursor({ cursorActive }) {
   const positionX = useMotionValue(0);
   const positionY = useMotionValue(0);
   const [hideCursor, setHideCursor] = useState(false);
+  const [removeCursor, setRemoveCursor] = useState(false);
+
+  // remove dot effect if small screen
+  useEffect(() => {
+    const handleDeviceLayout = () => {
+      if (window.innerWidth < 414) {
+        setRemoveCursor(true);
+      } else {
+        setRemoveCursor(false);
+      }
+    };
+
+    handleDeviceLayout();
+
+    window.addEventListener("resize", handleDeviceLayout);
+
+    return () => {
+      window.removeEventListener("resize", handleDeviceLayout);
+    };
+  }, []);
 
   useEffect(() => {
     const moveCursor = (e) => {
@@ -36,7 +56,7 @@ function Cursor({ cursorActive }) {
   return (
     <div>
       <motion.div
-        className={`cursor ${hideCursor ? "no-display" : null}`}
+        className={`cursor ${hideCursor || removeCursor ? "no-display" : null}`}
         style={{
           translateX: positionX,
           translateY: positionY,
