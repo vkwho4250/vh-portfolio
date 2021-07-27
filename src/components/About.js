@@ -52,7 +52,7 @@ function About({ changeCursorActive }) {
           </p>
           <p>
             I started this journey in November 2020 when I discovered how
-            exciting it is create using code and also the vast potential this
+            exciting it is to create using code and also the vast potential this
             career path has. Being a web developer allows me to be creative and
             curious without compromising the inherent problem-solver in me. I
             love that there’s never a dead-end in web development and am eager

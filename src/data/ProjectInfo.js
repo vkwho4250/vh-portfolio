@@ -41,17 +41,17 @@ const vueBulletJournal = {
 };
 
 const reactEcommerceSite = {
-  title: "React E-commerce Site",
+  title: "React E-Commerce Site",
   folder: "react-ecommerce",
   description: "A modern multi-page e-commerce site",
   reasons: [
     "to further explore React hooks and associated libraries",
-    "an opportunity to to use React Context API for shared states",
+    "an opportunity to use React Context API for shared states",
     "to create a seamless multi-page app that represents real commercial sites",
   ],
   achievements: [
-    "to utilize Context API as a transport mechanism (not manager) to make shared states accessible throughout the component tree",
-    "to implement react-router to easily traverse between pages",
+    "to utilize Context API as a transport mechanism to make shared states accessible throughout the component tree",
+    "to implement React Router to easily traverse between pages",
     "to effectively translate Figma design files to interactive site which balances design, functionality and responsiveness",
   ],
   tech: ["React", "Sass"],
