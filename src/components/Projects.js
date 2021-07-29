@@ -31,14 +31,16 @@ function Projects({ changeCursorActive }) {
                 onMouseEnter={changeCursorActive}
                 onMouseLeave={changeCursorActive}
               >
-                <h6>Expand All Project Details</h6>
+                <h6 className="expand-collapse">Expand All Project Details</h6>
               </button>
               <button
                 onClick={closeAllDetails}
                 onMouseEnter={changeCursorActive}
                 onMouseLeave={changeCursorActive}
               >
-                <h6>Collapse All Project Details</h6>
+                <h6 className="expand-collapse">
+                  Collapse All Project Details
+                </h6>
               </button>
             </div>
             <ul>
