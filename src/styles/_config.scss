@@ -6,6 +6,7 @@ $ice-gray: #f8f7f7;
 $soft-white: #fcfcfc;
 $dark-gray: #636368;
 $green-blue: #3e8491;
+$green-blue: #2c6068;
 
 $moon-gray: #dddcd8;
 $midnight-purple: #8082ac;
@@ -19,78 +20,78 @@ $text-color: $dark-gray;
 $header-color: $dark-gray;
 
 %header-styles {
-   font-family: "Barlow Condensed", sans-serif;
-   font-weight: 400;
-   text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 %selection-style {
-   color: $soft-white;
-   background: $green-blue;
+  color: $soft-white;
+  background: $green-blue;
 }
 
 %side-bar {
-   position: fixed;
-   z-index: 99;
-   top: 0;
-   height: 100vh;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  height: 100vh;
 }
 
 %list-style {
-   display: flex;
-   margin-bottom: 5rem;
+  display: flex;
+  margin-bottom: 5rem;
 
-   &::before {
-      content: "\2022";
-      color: $green-blue;
-      font-weight: bold;
-      display: inline-block;
-      width: 2rem;
-      margin-left: -1em;
-   }
+  &::before {
+    content: "\2022";
+    color: $green-blue;
+    font-weight: bold;
+    display: inline-block;
+    width: 2rem;
+    margin-left: -1em;
+  }
 
-   p {
-      padding-left: 15rem;
-   }
+  p {
+    padding-left: 15rem;
+  }
 }
 
 @mixin orange-dot($size) {
-   width: $size;
-   height: $size;
-   background: $bright-orange;
-   border-radius: 50%;
+  width: $size;
+  height: $size;
+  background: $bright-orange;
+  border-radius: 50%;
 }
 
 @mixin flex-container($justify, $align, $direction: row) {
-   width: 100%;
-   display: flex;
-   justify-content: $justify;
-   align-items: $align;
-   flex-direction: $direction;
+  width: 100%;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
 
 @mixin scrollbars(
-   $size,
-   $foreground-color,
-   $background-color: mix($foreground-color, white, 50%)
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
 ) {
-   // For Google Chrome
-   &::-webkit-scrollbar {
-      width: $size;
-      height: $size;
-   }
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
 
-   &::-webkit-scrollbar-thumb {
-      background: $foreground-color;
-   }
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
 
-   &::-webkit-scrollbar-track {
-      background: $background-color;
-   }
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
 
-   // For Internet Explorer
-   & {
-      scrollbar-face-color: $foreground-color;
-      scrollbar-track-color: $background-color;
-   }
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
 }

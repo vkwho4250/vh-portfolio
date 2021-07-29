@@ -1,87 +1,94 @@
 @import "../styles/config";
 
 nav {
-   position: absolute;
-   z-index: 99;
-   height: 5vh;
-   padding: 0 4vw;
-   @include flex-container(space-between, center);
-   text-transform: uppercase;
-   background: rgba($green-blue, 0.9);
+  position: absolute;
+  z-index: 150;
+  height: 50rem;
+  padding: 0 4vw;
+  @include flex-container(space-between, center);
+  text-transform: uppercase;
+  background: rgba($green-blue, 0.9);
 
-   h6 {
-      font-size: 16rem;
-   }
+  h6 {
+    font-size: 16rem;
+  }
 }
 
 .logo {
-   height: 15rem;
+  height: 15rem;
 }
 
 .page-nav-links {
-   display: flex;
+  display: flex;
 
-   li {
-      @include flex-container(center, center);
+  li {
+    @include flex-container(center, center);
 
-      height: 25rem;
-      margin: 0 15rem;
+    height: 25rem;
+    margin: 0 15rem;
 
-      &:hover {
-         text-decoration: underline;
-      }
+    &:hover {
+      text-decoration: underline;
+    }
 
-      a {
-         color: white;
-      }
-   }
+    a {
+      color: white;
+    }
+  }
 
-   .resume-btn {
-      background: darken($green-blue, 10%);
-   }
+  .resume-btn {
+    background: darken($green-blue, 10%);
+  }
 }
 
 .menu {
-   display: none;
+  display: none;
 }
 
 // ==  MOBILE DISPLAY ==
-@media (max-width: 540px) {
-   nav {
-      position: fixed;
-   }
+@media (max-width: 845px) {
+  nav {
+    position: fixed;
+  }
 
-   .page-nav-links {
-      position: absolute;
-      top: -300rem;
-      left: 0;
-      flex-direction: column;
+  .page-nav-links {
+    position: absolute;
+    top: -300rem;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    opacity: 0;
+    transition: all 1s;
+    background: rgba($green-blue, 0.85);
+
+    li,
+    .resume-btn {
+      margin: 0;
+      height: 70rem;
+    }
+
+    a {
       width: 100%;
-      opacity: 0;
-      transition: all 1s;
-      background: rgba($green-blue, 0.85);
+      text-align: center;
+    }
 
-      li {
-         margin: 0;
-      }
+    &.open {
+      top: 50rem;
+      opacity: 1;
+    }
+  }
 
-      &.open {
-         top: 5vh;
-         opacity: 1;
-      }
-   }
+  .menu {
+    @include flex-container(center, center);
+    height: 100%;
+    width: 70rem;
 
-   .menu {
-      @include flex-container(center, center);
-      height: 100%;
-      width: 30rem;
+    .menu-btn {
+      position: absolute;
+    }
 
-      .menu-btn {
-         position: absolute;
-      }
-
-      .icon {
-         color: $soft-white;
-      }
-   }
+    .icon {
+      color: $soft-white;
+    }
+  }
 }

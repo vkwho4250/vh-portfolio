@@ -45,9 +45,8 @@
   flex-direction: column;
 
   .icon {
-    width: 20rem;
-    height: 20rem;
-    margin-bottom: 10rem;
+    font-size: 25rem;
+    margin-bottom: 15rem;
 
     &:hover {
       color: $bright-orange;
@@ -70,17 +69,16 @@
     color: $text-color;
 
     .subheading {
-      font-size: calc(max(0.8vw, 2.2vh));
       color: $green-blue;
       margin: 10rem 0;
     }
 
-    h5 {
-      font-size: calc(max(1.5vw, 4vh));
-    }
-
     .thought-process {
       text-decoration: underline;
+
+      &:hover {
+        color: $bright-orange;
+      }
     }
   }
 

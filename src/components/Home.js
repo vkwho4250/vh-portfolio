@@ -25,7 +25,7 @@ function Home({ changeCursorActive }) {
   ];
 
   return (
-    <div id="home-page" className="home page">
+    <div id="home-page">
       <motion.div
         className="vector-image sun-container"
         initial={{ rotate: 90, opacity: 0 }}
@@ -84,10 +84,10 @@ function Home({ changeCursorActive }) {
             animate="endingXY"
             transition={{ duration: 0.5, delay: 1 }}
           >
-            <p>
+            <h3>
               With a passion for creative solutions, I'm using code to create
               experiences that resolve, enhance and delight!
-            </p>
+            </h3>
           </motion.div>
           <div className="nav-page-container">
             {navBtnText.map((navPage, index) => {

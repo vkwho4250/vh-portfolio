@@ -11,7 +11,7 @@ const yahtzee = {
     "to structure code for readability and reusability",
     "about the DOM structure and how to access/manipulate elements",
     "where/how to use key JS concepts: conditions, loops, forEach, reduce and more",
-    "to comment, debug and google (maniacally) when stuck",
+    "to comment, debug and google when stuck",
   ],
   tech: ["HTML5", "CSS3", "JavaScript"],
   screenshots: ["yahtzee-1", "yahtzee-2", "yahtzee-3"],
@@ -123,7 +123,7 @@ const ProjectInfo = [
   vueBulletJournal,
   yahtzee,
   reactLandingPage,
-  reactBulletJournal,
+  // reactBulletJournal,
   rockPaperScissors,
 ];
 

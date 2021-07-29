@@ -1,11 +1,11 @@
 @import "../styles/config";
 
 .socials {
-   @include flex-container(space-between, center);
-   width: 90rem;
-   margin: 2vh auto;
+  @include flex-container(space-between, center);
+  width: 120rem;
+  margin: 2vh auto;
 
-   svg.icon:hover {
-      color: $bright-orange;
-   }
+  svg.icon:hover {
+    color: $bright-orange;
+  }
 }

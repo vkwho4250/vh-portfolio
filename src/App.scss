@@ -16,7 +16,7 @@ html {
 body {
   width: 100vw;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: calc(max(1vw, 16rem));
+  font-size: 18rem;
   font-weight: 400;
   color: darken($text-color, 10%);
   background: $soft-white;
@@ -38,13 +38,13 @@ h6 {
 }
 
 h1 {
-  font-size: calc(max(5.5vw, 24rem));
+  font-size: calc(max(5.5vw, 40rem));
   letter-spacing: 3rem;
   color: $green-blue;
 }
 
 h2 {
-  font-size: calc(max(2.1vw, 16rem));
+  font-size: calc(max(2.1vw, 30rem));
   color: $green-blue;
 
   span {
@@ -53,23 +53,23 @@ h2 {
 }
 
 h3 {
-  font-size: calc(max(1.2vw, 18rem));
+  font-size: calc(max(1.5vw, 20rem));
   text-transform: initial;
   font-weight: 300;
   color: darken($text-color, 30%);
   letter-spacing: 1rem;
 }
 
-h4 {
-  font-size: calc(max(1.2vw, 16rem));
-  text-transform: initial;
-  color: $green-blue;
-  font-style: italic;
-}
+// h4 {
+//   font-size: calc(max(1.2vw, 18rem));
+//   text-transform: initial;
+//   color: $green-blue;
+//   font-style: italic;
+// }
 
 h5 {
   letter-spacing: 1rem;
-  font-size: calc(max(1.5vw, 16rem));
+  font-size: calc(max(1.5vw, 22rem));
   font-weight: 500;
 }
 
@@ -86,7 +86,6 @@ span {
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 
 li {
@@ -112,6 +111,7 @@ p {
 
 svg.icon {
   color: $green-blue;
+  font-size: 25rem;
 }
 
 .no-display {
@@ -120,6 +120,6 @@ svg.icon {
 
 @media only screen and (max-width: 414px) {
   * {
-    cursor: initial;
+    cursor: pointer;
   }
 }

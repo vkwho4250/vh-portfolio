@@ -14,7 +14,7 @@
 
     p {
       text-align: center;
-      font-size: 12rem;
+      font-size: 16rem;
     }
 
     .tech-icon {
@@ -31,23 +31,26 @@
     justify-content: center;
 
     a {
-      font-size: 12rem;
+      font-size: 14rem;
       color: $soft-white;
       text-align: center;
-      padding: 2rem;
+      padding: 3rem;
 
       &:hover {
         text-decoration: underline;
       }
     }
   }
+
+  .emphasis {
+    text-decoration: underline;
+    color: $green-blue;
+  }
 }
 
 @media only screen and (max-width: 414px) {
   .emphasis {
-    text-decoration: underline;
     cursor: pointer;
-    color: $green-blue;
     font-weight: 500;
   }
 }

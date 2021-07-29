@@ -50,10 +50,6 @@
     background-size: 110%;
     margin-bottom: 2vh;
   }
-
-  .resume-btn {
-    width: 120rem;
-  }
 }
 
 .summary {
@@ -62,6 +58,14 @@
   a {
     color: $bright-orange;
     font-weight: 500;
+  }
+}
+
+.skills {
+  .tech-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100rem);
+    row-gap: 5rem;
   }
 }
 
@@ -76,29 +80,13 @@
   }
 }
 
-.skills {
-  .tech-display {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 100rem);
-    row-gap: 1vh;
-  }
-}
+// == TABLET/MOBILE DISPLAY ==
 
-// == TABLET / MID-SIZE DISPLAY ==
-
-@media (max-width: 923px) {
-  .skills {
-    grid-area: 2 / 2 / 3 / 4;
+@media (max-width: 1024px) {
+  #about-page {
+    padding: 5vh 8vw;
   }
 
-  .extras {
-    grid-area: 3 / 2 / 4 / 4;
-  }
-}
-
-// == MOBILE DISPLAY ==
-
-@media (max-width: 540px) {
   .main-content {
     display: block;
   }
@@ -107,8 +95,8 @@
     flex-direction: row;
 
     .profile-pic {
-      width: 30vw;
-      height: 30vw;
+      width: 24vw;
+      height: 24vw;
       margin-right: 5vw;
     }
   }
@@ -116,6 +104,18 @@
   .summary,
   .extras,
   .skills {
-    margin: 2vh 0;
+    margin: 30rem 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-container {
+    flex-direction: column;
+
+    .profile-pic {
+      width: 50vw;
+      height: 50vw;
+      margin-right: 5vw;
+    }
   }
 }

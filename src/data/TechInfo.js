@@ -28,7 +28,7 @@ const TechInfo = [
   },
   {
     name: "React",
-    projects: ["portfolio", "react-ecommerce", "react-lp-clone", "react-bj"],
+    projects: ["portfolio", "react-ecommerce", "react-lp-clone"],
     svg: "react",
   },
   {

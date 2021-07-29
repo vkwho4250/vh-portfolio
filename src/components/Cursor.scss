@@ -1,7 +1,7 @@
 @import "../styles/config";
 
 .cursor {
-  @include orange-dot(10rem);
+  @include orange-dot(20rem);
   position: fixed;
   top: 0;
   left: 0;

@@ -25,6 +25,7 @@ function About({ changeCursorActive }) {
         </h1>
       </div>
       <div className="main-content">
+        {/* PROFILE  */}
         <div className="profile-container">
           <div className="profile-pic"></div>
           <div className="connect">
@@ -36,9 +37,13 @@ function About({ changeCursorActive }) {
               <h5>Connect with me here</h5>
             </a>
             <SocialsBar changeCursorActive={changeCursorActive} />
-            <ResumeBtn className="resume-btn" />
+            <ResumeBtn
+              className="resume-btn"
+              changeCursorActive={changeCursorActive}
+            />
           </div>
         </div>
+        {/*  SUMMARY  */}
         <div className="summary">
           <h2>
             <span>Hi, I'm Victoria! </span>
@@ -66,6 +71,7 @@ function About({ changeCursorActive }) {
             and creative!
           </p>
         </div>
+        {/*  SKILLS  */}
         <div className="skills">
           <h5
             onClick={changeTechInFocus}
@@ -88,6 +94,7 @@ function About({ changeCursorActive }) {
             })}
           </div>
         </div>
+        {/*  EXTRAS  */}
         <div className="extras">
           <h5>Also a huge fan of</h5>
           <ul>
