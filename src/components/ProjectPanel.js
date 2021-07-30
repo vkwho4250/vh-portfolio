@@ -10,6 +10,7 @@ function ProjectPanel({
   allDetails,
   setAllDetails,
   changeCursorActive,
+  changeProjectSlider,
 }) {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -120,6 +121,7 @@ function ProjectPanel({
                 </a>
               </div>
             </div>
+            <p>Click on the image to see more screenshots</p>
             <p
               className={showDetails ? "no-display" : "thought-process"}
               onClick={handleDetails}
@@ -129,7 +131,14 @@ function ProjectPanel({
               Learn more about my thought process
             </p>
           </div>
-          <div className="project-images">
+          <div
+            className="project-images"
+            onMouseEnter={changeCursorActive}
+            onMouseLeave={changeCursorActive}
+            onClick={() =>
+              changeProjectSlider(project.folder, project.totalImages)
+            }
+          >
             <div className="back-images">
               <div className="img-container">
                 <img

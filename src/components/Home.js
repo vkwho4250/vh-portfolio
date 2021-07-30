@@ -36,6 +36,7 @@ function Home({ changeCursorActive }) {
       </motion.div>
       <div className="text-container">
         <div className="bg-fade"></div>
+
         <div className="main-text">
           <motion.div
             className="border"

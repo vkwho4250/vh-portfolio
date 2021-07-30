@@ -4,7 +4,7 @@ import ProjectPanel from "./ProjectPanel";
 import ProjectInfo from "../data/ProjectInfo";
 import ProjectNavLink from "./ProjectNavLink";
 
-function Projects({ changeCursorActive }) {
+function Projects({ changeCursorActive, changeProjectSlider }) {
   const portfolio = {
     title: "Portfolio",
     folder: "You're already here :D",
@@ -73,6 +73,7 @@ function Projects({ changeCursorActive }) {
                 allDetails={allDetails}
                 setAllDetails={setAllDetails}
                 changeCursorActive={changeCursorActive}
+                changeProjectSlider={changeProjectSlider}
               />
             );
           })}

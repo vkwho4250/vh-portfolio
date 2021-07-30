@@ -17,6 +17,7 @@ const yahtzee = {
   screenshots: ["yahtzee-1", "yahtzee-2", "yahtzee-3"],
   github: "https://github.com/vkwho4250/JavaScript-Yahtzee",
   site: "https://yahtzee-vkwho.netlify.app/",
+  totalImages: 6,
 };
 
 const vueBulletJournal = {
@@ -38,6 +39,7 @@ const vueBulletJournal = {
   screenshots: ["vue-bj-1", "vue-bj-3", "vue-bj-2"],
   github: "https://github.com/vkwho4250/vue-bullet-journal",
   site: "https://vue-bullet-journal-vkwho.herokuapp.com/",
+  totalImages: 9,
 };
 
 const reactEcommerceSite = {
@@ -58,6 +60,7 @@ const reactEcommerceSite = {
   screenshots: ["react-ecommerce-1", "react-ecommerce-3", "react-ecommerce-2"],
   github: "https://github.com/vkwho4250/e-commerce-app",
   site: "https://vkwho-react-ecommerce-app.netlify.app/",
+  totalImages: 12,
 };
 
 const reactBulletJournal = {
@@ -78,6 +81,7 @@ const reactBulletJournal = {
   screenshots: ["react-bj-1", "react-bj-2", "react-bj-3"],
   github: "https://github.com/vkwho4250/react-frontend-journal",
   site: "https://react-frontend-journal.netlify.app",
+  totalImages: 0,
 };
 
 const reactLandingPage = {
@@ -98,6 +102,7 @@ const reactLandingPage = {
   screenshots: ["react-lp-clone-1", "react-lp-clone-2", "react-lp-clone-3"],
   github: "https://github.com/vkwho4250/react-lp-clone",
   site: "https://react-lp-clone.netlify.app/",
+  totalImages: 9,
 };
 
 const rockPaperScissors = {
@@ -116,6 +121,7 @@ const rockPaperScissors = {
   screenshots: ["rps-1", "rps-2", "rps-3"],
   github: "https://github.com/vkwho4250/psd-conversion-rps",
   site: "https://rock-paper-scissors-vkwho.netlify.app/",
+  totalImages: 9,
 };
 
 const ProjectInfo = [
